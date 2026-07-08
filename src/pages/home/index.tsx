@@ -336,11 +336,6 @@ export default function HomePage() {
       return;
     }
     
-    if (feature.id === 'meditation') {
-      Taro.navigateTo({ url: '/pages/meditation/index' });
-      return;
-    }
-    
     setExpandedFeature(feature.id);
   };
 
