@@ -25,10 +25,6 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
           from: 'src/images',
           to: 'dist/images',
         },
-        {
-          from: 'src/static/music',
-          to: 'dist/static/music',
-        },
       ],
       options: {},
     },

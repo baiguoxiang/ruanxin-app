@@ -13,8 +13,7 @@ export default defineAppConfig({
     'pages/idea/index',
     'pages/doodle/index',
     'pages/pet/index',
-    'pages/psytest/index',
-    'pages/meditation/index'
+    'pages/psytest/index'
   ],
   window: {
     backgroundTextStyle: 'light',

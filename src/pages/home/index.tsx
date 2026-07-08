@@ -24,7 +24,6 @@ import LonelinessCard from '@/components/LonelinessCard';
 import SelfDiscoveryCard from '@/components/SelfDiscoveryCard';
 import WorldCollectionCard from '@/components/WorldCollectionCard';
 import DailyLifeNewsCard from '@/components/DailyLifeNewsCard';
-import MeditationCard from '@/components/MeditationCard';
 import PetPage from '@/pages/pet/index';
 import type { DailyContent, Favorite, LoginResult } from '@/types';
 import { getTodayEncouragement } from '@/data/encouragementDB';
@@ -162,14 +161,6 @@ const FEATURES: FeatureItem[] = [
     title: '晚安寄语',
     subtitle: '温馨晚安祝福',
     gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-    isMemberOnly: false
-  },
-  {
-    id: 'meditation',
-    icon: '🧘',
-    title: '静心冥想',
-    subtitle: '放松身心，找回宁静',
-    gradient: 'linear-gradient(135deg, #8B5CF6 0%, #6366F1 100%)',
     isMemberOnly: false
   }
 ];
@@ -451,10 +442,6 @@ export default function HomePage() {
             
             {expandedFeature === 'goodnight' && (
               <GoodnightCard />
-            )}
-            
-            {expandedFeature === 'meditation' && (
-              <MeditationCard />
             )}
             
             {expandedFeature === 'firstaid' && (
