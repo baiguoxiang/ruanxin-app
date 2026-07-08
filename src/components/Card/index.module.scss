@@ -1,0 +1,38 @@
+@use '@/styles/variables.scss' as *;
+
+.card {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  margin-bottom: $spacing-md;
+  transition: all $transition-base;
+  position: relative;
+
+  &:active {
+    transform: scale(0.99);
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-md;
+}
+
+.cardContent {
+  color: $color-text-secondary;
+}
+
+.paddingSm {
+  padding: $spacing-sm;
+}
+
+.paddingMd {
+  padding: $spacing-md;
+}
+
+.paddingLg {
+  padding: $spacing-lg;
+}

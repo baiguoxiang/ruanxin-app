@@ -1,0 +1,101 @@
+@use '@/styles/variables.scss' as *;
+
+.newsCard {
+  position: relative;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-lg;
+}
+
+.cardIcon {
+  font-size: $font-size-xl;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.newsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+}
+
+.newsItem {
+  background: linear-gradient(145deg, $color-bg-card 0%, #fff 100%);
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  box-shadow: $shadow-card;
+  transition: all $transition-base;
+  border: 1rpx solid rgba($color-primary, 0.1);
+
+  &:active {
+    transform: scale(0.98);
+    box-shadow: $shadow-card-hover;
+  }
+}
+
+.newsHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  margin-bottom: $spacing-sm;
+}
+
+.iconWrapper {
+  width: 48rpx;
+  height: 48rpx;
+  border-radius: $radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsIcon {
+  font-size: $font-size-md;
+}
+
+.newsCategory {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  padding: 4rpx 12rpx;
+  border-radius: $radius-round;
+  background: rgba($color-primary, 0.1);
+  color: $color-primary;
+}
+
+.newsContent {
+  font-size: $font-size-xs;
+  line-height: $line-height-normal;
+  color: $color-text-secondary;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8rpx);
+  }
+}
+
+@media screen and (max-width: 750rpx) {
+  .newsList {
+    grid-template-columns: 1fr;
+  }
+}

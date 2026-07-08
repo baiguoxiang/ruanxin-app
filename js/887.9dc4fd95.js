@@ -1,0 +1,1 @@
+"use strict";(self.webpackJsonp=self.webpackJsonp||[]).push([[887],{"9887":function(_,n,e){function __WEBPACK_DEFAULT_EXPORT__(){return{"favorites":[]}}e.r(n),e.d(n,{"default":function(){return __WEBPACK_DEFAULT_EXPORT__}})}}]);

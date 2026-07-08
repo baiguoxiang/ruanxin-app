@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=375,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no,address=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="theme-color" content="#7B68EE" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="apple-touch-icon" href="./images/icon-192.png" />
+    <link rel="icon" href="./images/icon-192.png" type="image/png" />
+    <title>暖心助手</title>
+    <script>
+      // 固定 html fontSize，防止 flexible 脚本动态修改
+      <%= htmlWebpackPlugin.options.script %>
+      
+      // ServiceWorker disabled to avoid caching issues
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for (var registration of registrations) {
+            registration.unregister();
+          }
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

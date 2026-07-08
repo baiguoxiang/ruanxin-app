@@ -1,0 +1,1 @@
+"use strict";(self.webpackJsonp=self.webpackJsonp||[]).push([[959],{"5959":function(e,n,_){function __WEBPACK_DEFAULT_EXPORT__(){var e=new Date(Date.now()+6048e5);return{"openid":"mock_openid_"+Date.now(),"isNewUser":!0,"freeTrialEndTime":e.toISOString()}}_.r(n),_.d(n,{"default":function(){return __WEBPACK_DEFAULT_EXPORT__}})}}]);

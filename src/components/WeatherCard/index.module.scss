@@ -1,0 +1,98 @@
+@use '@/styles/variables.scss' as *;
+
+.weatherCard {
+  position: relative;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.cardIcon {
+  font-size: $font-size-xl;
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.weatherMain {
+  text-align: center;
+  padding: $spacing-md 0;
+}
+
+.cityName {
+  display: block;
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+  margin-bottom: $spacing-sm;
+}
+
+.weatherInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+}
+
+.temperature {
+  font-size: 72rpx;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.weatherText {
+  font-size: $font-size-lg;
+  color: $color-text-secondary;
+}
+
+.weatherDetails {
+  display: flex;
+  justify-content: space-around;
+  padding: $spacing-md 0;
+  border-top: 1rpx solid $color-divider;
+  border-bottom: 1rpx solid $color-divider;
+  margin-top: $spacing-md;
+}
+
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.detailIcon {
+  font-size: $font-size-lg;
+}
+
+.detailText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.weatherTip {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
+  padding: $spacing-md;
+  background: rgba($color-primary, 0.05);
+  border-radius: $radius-md;
+}
+
+.tipIcon {
+  font-size: $font-size-md;
+  flex-shrink: 0;
+}
+
+.tipText {
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+  color: $color-text-secondary;
+}

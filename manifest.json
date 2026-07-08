@@ -1,0 +1,36 @@
+{
+  "name": "暖心助手",
+  "short_name": "暖心",
+  "description": "一款温暖人心的生活服务应用，提供天气预报、每日运势、心理测试、本地资讯等功能",
+  "icons": [
+    {
+      "src": "./images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./images/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F5F7FA",
+  "theme_color": "#7B68EE",
+  "scope": "./",
+  "prefer_related_applications": false
+}

@@ -1,0 +1,289 @@
+@use '@/styles/variables.scss' as *;
+
+.contentCard {
+  background: white;
+  border-radius: $radius-xl;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.cardIcon {
+  font-size: $font-size-xl;
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.cardSubtitle {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-left: auto;
+}
+
+.tabBar {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.tabButton {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: $spacing-sm;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.activeTab {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    
+    .tabLabel {
+      color: $color-text-white;
+    }
+    
+    .tabCount {
+      background: rgba(255, 255, 255, 0.3);
+      color: $color-text-white;
+    }
+  }
+}
+
+.tabIcon {
+  font-size: $font-size-lg;
+}
+
+.tabLabel {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-text-secondary;
+}
+
+.tabCount {
+  font-size: $font-size-xs;
+  background: rgba(102, 126, 234, 0.1);
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: #667eea;
+}
+
+.categoryBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+  margin-bottom: $spacing-md;
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+.categoryButton {
+  padding: 4px 12px;
+  font-size: $font-size-xs;
+  background: rgba(102, 126, 234, 0.05);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  border-radius: 20px;
+  cursor: pointer;
+  color: $color-text-secondary;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.activeCategory {
+    background: #667eea;
+    color: $color-text-white;
+    border-color: #667eea;
+  }
+}
+
+.contentArea {
+  min-height: 200px;
+  padding: $spacing-md;
+  background: rgba(102, 126, 234, 0.03);
+  border-radius: $radius-lg;
+  margin-bottom: $spacing-md;
+}
+
+.contentItem {
+  width: 100%;
+}
+
+.contentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-sm;
+}
+
+.categoryTag {
+  font-size: $font-size-xs;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: $color-text-white;
+  padding: 4px 12px;
+  border-radius: 12px;
+}
+
+.dateText {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.speakButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  border-radius: 20px;
+  font-size: $font-size-xs;
+  color: #667eea;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.speaking {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: $color-text-white;
+    border-color: transparent;
+  }
+}
+
+.likeCount {
+  font-size: $font-size-xs;
+  color: #ef4444;
+}
+
+.contentBody {
+  p {
+    margin: 0;
+    line-height: 1.8;
+  }
+}
+
+.jokeContent {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  font-style: italic;
+}
+
+.storyTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  margin: 0 0 $spacing-sm 0;
+}
+
+.storyContent {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  text-indent: 2em;
+}
+
+.storyFooter {
+  margin-top: $spacing-sm;
+  padding-top: $spacing-sm;
+  border-top: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.newsTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  margin: 0 0 $spacing-sm 0;
+}
+
+.newsContent {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.newsFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: $spacing-sm;
+  padding-top: $spacing-sm;
+  border-top: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.sourceText {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.readTime {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: $spacing-md;
+  border-top: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.navButton {
+  padding: $spacing-sm $spacing-md;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: $color-text-white;
+  border: none;
+  border-radius: $radius-md;
+  font-size: $font-size-sm;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &.disabled {
+    background: rgba(102, 126, 234, 0.2);
+    cursor: not-allowed;
+  }
+}
+
+.pageIndicator {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-lg;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: $spacing-sm;
+}
+
+.emptyText {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}

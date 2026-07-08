@@ -1,0 +1,231 @@
+.pageContainer {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #F5F5F5 0%, #FAFAFA 100%);
+  padding: 16px;
+  padding-bottom: 80px;
+}
+
+.userCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.userAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatarIcon {
+  font-size: 32px;
+}
+
+.userInfo {
+  flex: 1;
+}
+
+.userName {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.userLevel {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.vipButton {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.menuCard {
+  margin-bottom: 16px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+
+.menuIcon {
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.menuText {
+  flex: 1;
+  font-size: 15px;
+}
+
+.menuArrow {
+  font-size: 20px;
+  color: #ccc;
+}
+
+.contentCard {
+  min-height: 200px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: none;
+  font-size: 14px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  
+  &.active {
+    border-bottom-color: #7B68EE;
+    color: #7B68EE;
+    font-weight: bold;
+  }
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.emptyText {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.emptyHint {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.menuBadge {
+  padding: 2px 8px;
+  background: #FF6B6B;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.listContainer {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  
+  &:not(:last-child) {
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+
+.itemIcon {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.itemContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemTitle {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.itemType {
+  font-size: 12px;
+  color: #7B68EE;
+  background: rgba(123, 104, 238, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.itemTime {
+  font-size: 12px;
+  color: #999;
+}
+
+.deleteButton {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f5f5f5;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:active {
+    background: #eee;
+    color: #FF6B6B;
+  }
+}
+
+.clearButton {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #f5f5f5;
+  color: #999;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-top: 16px;
+  
+  &:active {
+    background: #eee;
+    color: #666;
+  }
+}

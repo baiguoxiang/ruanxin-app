@@ -1,0 +1,33 @@
+@use '@/styles/variables.scss' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  padding: $spacing-sm $spacing-md;
+  background: $color-bg-hover;
+  border-radius: $radius-button;
+  transition: all $transition-base;
+
+  &:active {
+    background: $color-border;
+    transform: scale(0.96);
+  }
+}
+
+.active {
+  background: rgba($color-primary, 0.1);
+
+  .text {
+    color: $color-primary;
+  }
+}
+
+.icon {
+  font-size: $font-size-lg;
+}
+
+.text {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}

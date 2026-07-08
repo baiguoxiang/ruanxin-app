@@ -1,0 +1,54 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-gradient;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $spacing-lg;
+  padding-top: calc($spacing-md + env(safe-area-inset-top));
+  background: $color-bg-card;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+
+.backButton {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: $color-bg-hover;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.96);
+    background: $color-bg-hover;
+  }
+}
+
+.backIcon {
+  font-size: $font-size-lg;
+  color: $color-text-primary;
+}
+
+.headerTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.placeholder {
+  width: 60rpx;
+}
+
+.content {
+  padding: $spacing-lg;
+  padding-bottom: calc(100rpx + env(safe-area-inset-bottom));
+}

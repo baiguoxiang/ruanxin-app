@@ -1,0 +1,394 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-gradient;
+  padding-bottom: calc(400rpx + env(safe-area-inset-bottom));
+}
+
+.greetingCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%);
+  padding: $spacing-lg;
+  margin-bottom: $spacing-lg;
+}
+
+.greetingContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.greetingTime {
+  display: block;
+  font-size: $font-size-sm;
+  opacity: 0.8;
+  margin-bottom: $spacing-xs;
+}
+
+.greetingText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-sm;
+}
+
+.encouragementQuote {
+  font-size: $font-size-md;
+  line-height: 1.5;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.7);
+  font-style: italic;
+}
+
+.greetingIcon {
+  font-size: 48rpx;
+}
+
+.dailyCollection {
+  margin-bottom: $spacing-lg;
+}
+
+.collectionGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-md;
+}
+
+.collectionItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-md;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+  
+  &:active {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.collectionIcon {
+  font-size: 40rpx;
+  margin-bottom: $spacing-xs;
+}
+
+.collectionText {
+  font-size: $font-size-xs;
+}
+
+.content {
+  padding: $spacing-lg;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xl * 2;
+}
+
+.loadingIcon {
+  font-size: 64rpx;
+  animation: pulse 2s infinite;
+}
+
+.loadingText {
+  margin-top: $spacing-md;
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}
+
+.storiesSection, .jokesSection, .featuresSection {
+  margin-bottom: $spacing-lg;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-md;
+}
+
+.featureCard {
+  position: relative;
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all $transition-base;
+  min-height: 140rpx;
+  box-shadow: 0 6rpx 20rpx rgba(0, 0, 0, 0.08);
+
+  &:active {
+    transform: scale(0.96);
+    box-shadow: 0 3rpx 10rpx rgba(0, 0, 0, 0.12);
+  }
+}
+
+.featureIcon {
+  font-size: 44rpx;
+  margin-bottom: $spacing-xs;
+}
+
+.featureTitle {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+  text-align: center;
+}
+
+.featureSubtitle {
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  margin-top: $spacing-xs;
+}
+
+.featureArrow {
+  position: absolute;
+  top: $spacing-xs;
+  right: $spacing-xs;
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.memberBadge {
+  position: absolute;
+  top: $spacing-xs;
+  left: $spacing-xs;
+  font-size: $font-size-xs;
+  color: $color-text-white;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 2rpx 8rpx;
+  border-radius: $radius-sm;
+  font-weight: $font-weight-bold;
+}
+
+.featureCard {
+  &.active {
+    transform: scale(0.96);
+    box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.15);
+  }
+}
+
+.expandedSection {
+  margin-top: $spacing-md;
+  margin-bottom: $spacing-lg;
+}
+
+.expandedCard {
+  background: $color-bg-card;
+  border-radius: $radius-xl;
+  padding: 0;
+  overflow: hidden;
+}
+
+.expandedHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $spacing-lg;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+}
+
+.expandedTitleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.backButton {
+  font-size: $font-size-md;
+  color: $color-text-white;
+  padding: $spacing-xs $spacing-sm;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: $radius-md;
+  border: none;
+  cursor: pointer;
+
+  &:active {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.expandedTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+}
+
+.expandedDate {
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.placeholder {
+  width: 80rpx;
+}
+
+.expandedContent {
+  padding: $spacing-lg;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.sectionIcon {
+  font-size: $font-size-lg;
+  margin-right: $spacing-sm;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.sectionCount {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-left: $spacing-xs;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  width: 80%;
+  max-width: 500rpx;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-xl;
+}
+
+.modalTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  text-align: center;
+  display: block;
+  margin-bottom: $spacing-xs;
+}
+
+.modalSubtitle {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  text-align: center;
+  display: block;
+  margin-bottom: $spacing-xl;
+}
+
+.dateInput {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 $spacing-md;
+  background: $color-bg-hover;
+  border-radius: $radius-md;
+  font-size: $font-size-md;
+  margin-bottom: $spacing-xl;
+}
+
+.modalActions {
+  display: flex;
+  gap: $spacing-md;
+}
+
+.cancelBtn {
+  flex: 1;
+  height: 80rpx;
+  background: $color-bg-hover;
+  color: $color-text-secondary;
+  border-radius: $radius-md;
+  font-size: $font-size-md;
+  border: none;
+}
+
+.confirmBtn {
+  flex: 1;
+  height: 80rpx;
+  background: $color-primary;
+  color: $color-text-white;
+  border-radius: $radius-md;
+  font-size: $font-size-md;
+  border: none;
+}
+
+.psyTestSection {
+  margin-bottom: $spacing-lg;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.sectionIcon {
+  font-size: 28rpx;
+}
+
+.sectionTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.psyTestGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $spacing-md;
+}
+
+.psyTestCard {
+  padding: $spacing-md;
+  border-radius: $radius-lg;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+}
+
+.psyTestIcon {
+  font-size: 36rpx;
+  margin-bottom: $spacing-xs;
+}
+
+.psyTestTitle {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacing-xs;
+}
+
+.psyTestSubtitle {
+  font-size: $font-size-xs;
+  opacity: 0.9;
+}

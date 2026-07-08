@@ -1,0 +1,394 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-gradient;
+  padding: $spacing-lg;
+  padding-bottom: 200rpx;
+}
+
+.header {
+  text-align: center;
+  padding: $spacing-xl 0;
+}
+
+.headerTitle {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-sm;
+}
+
+.headerSubtitle {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.packageList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  margin-bottom: $spacing-xl;
+}
+
+.packageCard {
+  position: relative;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-xl;
+  box-shadow: $shadow-card;
+  transition: all $transition-base;
+  border: 3rpx solid transparent;
+
+  &.selected {
+    border-color: $color-gold;
+    box-shadow: 0 4rpx 20rpx rgba($color-gold, 0.2);
+
+    .checkIcon {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.checkIcon {
+  position: absolute;
+  top: $spacing-md;
+  right: $spacing-md;
+  font-size: $font-size-xl;
+  color: $color-success;
+  opacity: 0;
+  transition: opacity $transition-fast;
+}
+
+.packageHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-sm;
+}
+
+.packageIcon {
+  font-size: $font-size-xxl;
+}
+
+.packageName {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.packagePrice {
+  display: flex;
+  align-items: baseline;
+  gap: $spacing-xs;
+  margin-bottom: $spacing-sm;
+}
+
+.priceValue {
+  font-size: 64rpx;
+  font-weight: $font-weight-bold;
+  color: $color-price;
+}
+
+.priceUnit {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.packageDuration {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-bottom: $spacing-md;
+}
+
+.packageTag {
+  display: inline-block;
+  padding: $spacing-xs $spacing-sm;
+  background: rgba($color-gold, 0.1);
+  border-radius: $radius-sm;
+  font-size: $font-size-xs;
+  color: $color-gold-dark;
+}
+
+.packageBenefits {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.benefitItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.benefitCheck {
+  font-size: $font-size-sm;
+  color: $color-success;
+}
+
+.benefitText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.purchaseButton {
+  background: $color-primary-gradient;
+  padding: $spacing-lg;
+  border-radius: $radius-button;
+  text-align: center;
+  margin-bottom: $spacing-lg;
+  box-shadow: 0 4rpx 16rpx rgba($color-primary, 0.3);
+  transition: all $transition-base;
+  position: relative;
+  z-index: 50;
+  cursor: pointer;
+  display: block;
+
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+.purchaseText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+}
+
+.tips {
+  text-align: center;
+  padding: $spacing-md;
+  background: rgba($color-primary, 0.05);
+  border-radius: $radius-md;
+}
+
+.tipsText {
+  font-size: $font-size-xs;
+  line-height: $line-height-normal;
+  color: $color-text-tertiary;
+}
+
+.monthlyTag {
+  background: rgba($color-primary, 0.1);
+  color: $color-primary;
+}
+
+.qrcodeContainer {
+  padding: $spacing-lg 0;
+}
+
+.qrcodeHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md 0;
+  margin-bottom: $spacing-lg;
+}
+
+.backButton {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  padding: $spacing-sm;
+}
+
+.qrcodeTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.placeholder {
+  width: 80rpx;
+}
+
+.qrcodeCard {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-xl;
+  box-shadow: $shadow-card;
+  margin-bottom: $spacing-lg;
+}
+
+.qrcodeTip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-lg;
+}
+
+.qrcodeTipIcon {
+  font-size: $font-size-xl;
+}
+
+.qrcodeTipText {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.paymentSteps {
+  display: flex;
+  justify-content: center;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-lg;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.stepNumber {
+  width: 48rpx;
+  height: 48rpx;
+  background: $color-primary;
+  color: $color-text-white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+}
+
+.stepText {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+  text-align: center;
+}
+
+.qrcodeWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: $spacing-lg;
+}
+
+.qrcodeImage {
+  width: 360rpx;
+  height: 360rpx;
+  border-radius: $radius-md;
+}
+
+.qrcodeCanvas {
+  width: 360rpx;
+  height: 360rpx;
+  border-radius: $radius-md;
+}
+
+.qrcodeOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-sm;
+}
+
+.qrcodeOverlayText {
+  font-size: $font-size-sm;
+  color: $color-text-white;
+  font-weight: $font-weight-semibold;
+}
+
+.paymentInfo {
+  background: rgba($color-primary, 0.05);
+  border-radius: $radius-md;
+  padding: $spacing-md;
+}
+
+.paymentRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-sm 0;
+  border-bottom: 1rpx solid rgba($color-primary, 0.1);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.paymentLabel {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.paymentValue {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.paymentAmount {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-price;
+}
+
+.confirmButton {
+  background: $color-success-gradient;
+  padding: $spacing-lg;
+  border-radius: $radius-button;
+  text-align: center;
+  margin-bottom: $spacing-lg;
+  box-shadow: 0 4rpx 16rpx rgba($color-success, 0.3);
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+}
+
+.confirmText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+}
+
+.successIcon {
+  width: 120rpx;
+  height: 120rpx;
+  background: $color-success;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto $spacing-lg;
+  font-size: 60rpx;
+  color: $color-text-white;
+  animation: successBounce 0.5s ease-out;
+}
+
+@keyframes successBounce {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.qrcodeTips {
+  text-align: center;
+  padding: $spacing-md;
+  background: rgba($color-warning, 0.1);
+  border-radius: $radius-md;
+}
+
+.qrcodeTipsText {
+  font-size: $font-size-xs;
+  color: $color-warning;
+}

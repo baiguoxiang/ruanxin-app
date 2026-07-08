@@ -1,0 +1,245 @@
+@use '@/styles/variables.scss' as *;
+
+.suggestionsCard {
+  position: relative;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.cardIcon {
+  font-size: $font-size-xl;
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.taskCount {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  margin-left: auto;
+}
+
+.cardSubtitle {
+  font-size: $font-size-xs;
+  color: $color-primary;
+  margin-left: auto;
+}
+
+.tasksList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  margin-bottom: $spacing-lg;
+}
+
+.addTaskSection {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  margin-bottom: $spacing-md;
+  padding: $spacing-md;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: $radius-lg;
+  border: 2rpx dashed $color-primary;
+}
+
+.taskInput {
+  width: 100%;
+  height: 96rpx;
+  padding: $spacing-md;
+  background: $color-bg-page;
+  border: 2rpx solid $color-primary;
+  border-radius: $radius-md;
+  font-size: $font-size-lg;
+  line-height: 1.5;
+  color: $color-text-primary;
+}
+
+.addButton {
+  width: 100%;
+  padding: $spacing-md;
+  background: $color-primary-gradient;
+  color: $color-text-white;
+  border: none;
+  border-radius: $radius-md;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+}
+
+.addIcon {
+  font-size: $font-size-xl;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.inputButtons {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: flex-end;
+}
+
+.cancelButton {
+  padding: $spacing-md $spacing-lg;
+  background: $color-bg-card;
+  color: $color-text-secondary;
+  border: 2rpx solid $color-divider;
+  border-radius: $radius-md;
+  font-size: $font-size-md;
+}
+
+.confirmButton {
+  padding: $spacing-md $spacing-lg;
+  background: $color-primary-gradient;
+  color: $color-text-white;
+  border: none;
+  border-radius: $radius-md;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+}
+
+.taskCheckbox {
+  width: 40rpx;
+  height: 40rpx;
+  border: 2rpx solid $color-primary;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-xs;
+  color: $color-text-white;
+  flex-shrink: 0;
+  background: $color-bg-card;
+
+  &.checked {
+    background: $color-primary-gradient;
+  }
+}
+
+.completed {
+  text-decoration: line-through;
+  color: $color-text-tertiary;
+}
+
+.deleteButton {
+  width: 48rpx;
+  height: 48rpx;
+  border: none;
+  background: $color-error;
+  color: $color-text-white;
+  border-radius: 50%;
+  font-size: $font-size-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.defaultText {
+  color: $color-text-tertiary;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-xl;
+}
+
+.emptyIcon {
+  font-size: $font-size-xxl;
+  margin-bottom: $spacing-sm;
+}
+
+.emptyText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.taskItem {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-md;
+}
+
+.taskNumber {
+  width: 40rpx;
+  height: 40rpx;
+  background: $color-primary-gradient;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+  flex-shrink: 0;
+}
+
+.taskText {
+  font-size: $font-size-md;
+  line-height: $line-height-normal;
+  color: $color-text-secondary;
+  flex: 1;
+}
+
+.tipsSection {
+  padding-top: $spacing-md;
+  border-top: 1rpx solid $color-divider;
+}
+
+.tipsHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.tipsIcon {
+  font-size: $font-size-lg;
+}
+
+.tipsTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+}
+
+.tipsList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.tipItem {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-sm;
+}
+
+.tipDot {
+  font-size: $font-size-md;
+  color: $color-primary;
+  flex-shrink: 0;
+}
+
+.tipText {
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+  color: $color-text-secondary;
+}

@@ -1,0 +1,48 @@
+@use '@/styles/variables.scss' as *;
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $color-lock-mask;
+  backdrop-filter: blur(8rpx);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border-radius: $radius-lg;
+}
+
+.lockIcon {
+  font-size: 80rpx;
+  margin-bottom: $spacing-md;
+  opacity: 0.6;
+}
+
+.lockText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  color: $color-text-secondary;
+  margin-bottom: $spacing-xl;
+}
+
+.lockButton {
+  background: $color-primary-gradient;
+  padding: $spacing-md $spacing-xl;
+  border-radius: $radius-button;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.96);
+    opacity: 0.9;
+  }
+}
+
+.lockButtonText {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-white;
+}

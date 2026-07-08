@@ -1,0 +1,1 @@
+"use strict";(self.webpackJsonp=self.webpackJsonp||[]).push([[662],{"7662":function(_,e,n){function __WEBPACK_DEFAULT_EXPORT__(_){return{"orderId":"ORDER_".concat(Date.now()),"type":_.type}}n.r(e),n.d(e,{"default":function(){return __WEBPACK_DEFAULT_EXPORT__}})}}]);

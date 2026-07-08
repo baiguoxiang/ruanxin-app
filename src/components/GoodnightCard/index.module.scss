@@ -1,0 +1,154 @@
+.goodnightCard {
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  color: #fff;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.cardIcon {
+  font-size: 20px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cardTime {
+  margin-left: auto;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.airHostessSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.airHostessWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.airHostessEmoji {
+  font-size: 48px;
+  display: inline-block;
+  transform-origin: bottom center;
+  animation: bow 2.4s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes bow {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  20% {
+    transform: rotate(-8deg) translateY(0);
+  }
+  35% {
+    transform: rotate(0deg) translateY(-4px);
+  }
+  50% {
+    transform: rotate(8deg) translateY(0);
+  }
+  65% {
+    transform: rotate(0deg) translateY(-4px);
+  }
+  80% {
+    transform: rotate(-4deg) translateY(0);
+  }
+}
+
+.airHostessBubble {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  color: #302b63;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 16px;
+  white-space: nowrap;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: bubbleShow 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(255, 255, 255, 0.95);
+  }
+}
+
+@keyframes bubbleShow {
+  0%, 70%, 100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(4px);
+  }
+  20%, 50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.moodBadge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(255, 217, 61, 0.2);
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.moodText {
+  font-size: 12px;
+  color: #FFD93D;
+}
+
+.goodnightContent {
+  text-align: center;
+  padding: 12px;
+}
+
+.goodnightText {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.star {
+  font-size: 20px;
+  animation: twinkle 2s infinite;
+  
+  &:nth-child(2) { animation-delay: 0.3s; }
+  &:nth-child(3) { animation-delay: 0.6s; }
+  &:nth-child(4) { animation-delay: 0.9s; }
+  &:nth-child(5) { animation-delay: 1.2s; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}

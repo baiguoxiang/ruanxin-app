@@ -1,0 +1,596 @@
+@use '@/styles/variables.scss' as *;
+
+.cardContainer {
+  position: relative;
+  margin-bottom: $spacing-lg;
+}
+
+.financeCard {
+  background: white;
+  border-radius: $radius-xl;
+  box-shadow: 0 10px 40px rgba(102, 126, 234, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.cardIcon {
+  font-size: $font-size-xl;
+  margin-right: $spacing-sm;
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cardSubtitle {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-left: $spacing-sm;
+}
+
+.summarySection {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.summaryCard {
+  flex: 1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: $radius-lg;
+  padding: $spacing-md;
+  text-align: center;
+}
+
+.summaryLabel {
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  margin-bottom: $spacing-xs;
+}
+
+.summaryAmount {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+  
+  &.positive {
+    color: #10b981;
+  }
+  
+  &.negative {
+    color: #ef4444;
+  }
+  
+  &.income {
+    color: #10b981;
+  }
+  
+  &.expense {
+    color: #ef4444;
+  }
+}
+
+.dailySection {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.dailyCard {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: $radius-md;
+  padding: $spacing-sm $spacing-md;
+}
+
+.dailyIcon {
+  font-size: $font-size-lg;
+}
+
+.dailyInfo {
+  flex: 1;
+}
+
+.dailyLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  display: block;
+  margin-bottom: $spacing-xs;
+}
+
+.dailyAmount {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+}
+
+.contentWrapper {
+  position: relative;
+  margin-bottom: $spacing-md;
+}
+
+.recordsArea {
+  margin-bottom: $spacing-md;
+}
+
+.recordsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-sm;
+}
+
+.recordsTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+}
+
+.recordsActions {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.actionButton {
+  padding: $spacing-xs $spacing-sm;
+  background: rgba(102, 126, 234, 0.1);
+  border: none;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: all $transition-base;
+  font-size: $font-size-xs;
+  color: #667eea;
+
+  &:active {
+    background: rgba(102, 126, 234, 0.2);
+    transform: scale(0.96);
+  }
+}
+
+.recordsList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.recordItem {
+  display: flex;
+  align-items: center;
+  background: #f8fafc;
+  border-radius: $radius-md;
+  padding: $spacing-sm;
+}
+
+.recordIcon {
+  font-size: $font-size-lg;
+  margin-right: $spacing-sm;
+}
+
+.recordInfo {
+  flex: 1;
+}
+
+.recordDescription {
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+  display: block;
+}
+
+.recordCategory {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  display: block;
+}
+
+.recordAmount {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  
+  &.income {
+    color: #10b981;
+  }
+  
+  &.expense {
+    color: #ef4444;
+  }
+}
+
+.dateGroup {
+  margin-bottom: $spacing-sm;
+}
+
+.dateHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-xs $spacing-sm;
+  background: rgba(102, 126, 234, 0.08);
+  border-radius: $radius-sm;
+  margin-bottom: $spacing-xs;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    background: rgba(102, 126, 234, 0.15);
+  }
+}
+
+.dateTitle {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  color: #667eea;
+}
+
+.dateSummary {
+  font-size: $font-size-xs;
+  display: flex;
+  align-items: center;
+}
+
+.expandIcon {
+  font-size: $font-size-xs;
+  color: #667eea;
+  margin-left: $spacing-xs;
+  transition: transform $transition-base;
+}
+
+.dateRecords {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  padding-left: $spacing-sm;
+}
+
+.emptyState {
+  text-align: center;
+  padding: $spacing-xl;
+  opacity: 0.6;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: $spacing-sm;
+}
+
+.emptyText {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+  display: block;
+  margin-bottom: $spacing-xs;
+}
+
+.emptyHint {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  display: block;
+}
+
+.reportArea {
+  padding: $spacing-sm 0;
+}
+
+.reportHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.reportTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.backButton {
+  padding: $spacing-xs $spacing-md;
+  background: rgba(102, 126, 234, 0.1);
+  border: none;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  font-size: $font-size-sm;
+  color: #667eea;
+
+  &:active {
+    background: rgba(102, 126, 234, 0.2);
+  }
+}
+
+.summaryCards {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.summaryCard {
+  flex: 1;
+  background: rgba(102, 126, 234, 0.05);
+  border-radius: $radius-md;
+  padding: $spacing-sm;
+  text-align: center;
+}
+
+.summaryLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  display: block;
+  margin-bottom: $spacing-xs;
+}
+
+.summaryAmount {
+  font-size: $font-size-md;
+  font-weight: $font-weight-bold;
+  
+  &.income {
+    color: #10b981;
+  }
+  
+  &.expense {
+    color: #ef4444;
+  }
+}
+
+.categorySection {
+  margin-bottom: $spacing-md;
+}
+
+.sectionTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  display: block;
+  margin-bottom: $spacing-sm;
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+}
+
+.categoryInfo {
+  display: flex;
+  align-items: center;
+  width: 80px;
+  gap: $spacing-xs;
+}
+
+.categoryIcon {
+  font-size: $font-size-sm;
+}
+
+.categoryName {
+  font-size: $font-size-xs;
+  color: $color-text-primary;
+}
+
+.categoryBarWrapper {
+  flex: 1;
+  height: 8px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.categoryBar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.categoryAmount {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  width: 60px;
+  text-align: right;
+}
+
+.suggestionsSection {
+  margin-bottom: $spacing-md;
+}
+
+.suggestionsList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.suggestionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-sm;
+}
+
+.suggestionIcon {
+  font-size: $font-size-sm;
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.suggestionText {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+}
+
+.bookSection {
+  margin-top: $spacing-md;
+}
+
+.bookCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  background: rgba(102, 126, 234, 0.05);
+  border: none;
+  border-radius: $radius-md;
+  padding: $spacing-sm;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    background: rgba(102, 126, 234, 0.1);
+  }
+}
+
+.bookIcon {
+  font-size: $font-size-xl;
+}
+
+.bookInfo {
+  flex: 1;
+  text-align: left;
+}
+
+.bookTitle {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  display: block;
+}
+
+.bookAuthor {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  display: block;
+}
+
+.inputSection {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: $spacing-sm;
+  position: relative;
+  z-index: 20;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.inputRow {
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  min-width: 0 !important;
+}
+
+.buttonRow {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: $spacing-md;
+}
+
+.voiceBtn {
+  width: 44px !important;
+  height: 44px !important;
+  border-radius: 50% !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+  transition: all $transition-base;
+  flex-shrink: 0 !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  padding: 0 !important;
+  margin: 0 !important;
+
+  &:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+  }
+}
+
+.voiceIcon {
+  font-size: 20px;
+}
+
+.input {
+  width: 100% !important;
+  flex: none !important;
+  height: 120px !important;
+  padding: $spacing-lg $spacing-md !important;
+  background: #f8fafc !important;
+  border-radius: $radius-md !important;
+  font-size: $font-size-lg !important;
+  border: 2px solid rgba(102, 126, 234, 0.1) !important;
+  outline: none !important;
+  color: $color-text-primary !important;
+  transition: all $transition-base;
+  line-height: 1.6 !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+
+  :global input {
+    width: 100% !important;
+    height: 120px !important;
+    box-sizing: border-box !important;
+    border: none !important;
+    outline: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  &:focus {
+    border-color: rgba(102, 126, 234, 0.3);
+    background: white;
+  }
+
+  &::placeholder {
+    color: $color-text-tertiary;
+  }
+}
+
+.sendBtn {
+  height: 44px !important;
+  padding: 0 24rpx !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border-radius: $radius-md !important;
+  transition: all $transition-base;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: none !important;
+  cursor: pointer;
+  flex-shrink: 0 !important;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  width: auto !important;
+  margin: 0 !important;
+  flex: none !important;
+  min-width: 100rpx !important;
+
+  &:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+  }
+}
+
+.sendBtnText {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+}

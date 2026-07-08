@@ -1,0 +1,180 @@
+@use '@/styles/variables.scss' as *;
+
+.fortuneCard {
+  position: relative;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.cardIcon {
+  font-size: $font-size-xl;
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.baziSection {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  background: linear-gradient(135deg, rgba(138, 43, 226, 0.1) 0%, rgba(75, 0, 130, 0.1) 100%);
+  border-radius: $radius-md;
+  margin-bottom: $spacing-md;
+}
+
+.baziLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.baziValue {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+}
+
+.zodiacValue {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.fortuneOverall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-md;
+  padding: $spacing-lg;
+  border-radius: $radius-md;
+  margin-bottom: $spacing-md;
+}
+
+.overallLabel {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}
+
+.overallValue {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+}
+
+.luckySection {
+  display: flex;
+  gap: $spacing-md;
+  margin-bottom: $spacing-md;
+}
+
+.luckyItem {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-md;
+  background: $color-bg-hover;
+  border-radius: $radius-md;
+}
+
+.luckyIcon {
+  font-size: $font-size-lg;
+}
+
+.luckyLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.luckyValue {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.fortuneDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacing-md;
+  margin-bottom: $spacing-md;
+}
+
+.detailItem {
+  padding: $spacing-md;
+  background: $color-bg-page;
+  border-radius: $radius-md;
+}
+
+.detailIcon {
+  font-size: $font-size-lg;
+  margin-bottom: $spacing-xs;
+}
+
+.detailLabel {
+  display: block;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-bottom: $spacing-xs;
+}
+
+.detailText {
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+  color: $color-text-secondary;
+}
+
+.fortuneAdvice {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-sm;
+  padding: $spacing-md;
+  background: rgba($color-gold, 0.1);
+  border-radius: $radius-md;
+  border: 1rpx solid rgba($color-gold, 0.2);
+  margin-bottom: $spacing-md;
+}
+
+.adviceIcon {
+  font-size: $font-size-md;
+  flex-shrink: 0;
+}
+
+.adviceText {
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+  color: $color-text-secondary;
+}
+
+.improvementSection {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-sm;
+  padding: $spacing-md;
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.1) 0%, rgba(255, 140, 0, 0.1) 100%);
+  border-radius: $radius-md;
+  border: 1rpx solid rgba(255, 165, 0, 0.2);
+}
+
+.improvementIcon {
+  font-size: $font-size-md;
+  flex-shrink: 0;
+}
+
+.improvementLabel {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+  margin-bottom: $spacing-xs;
+}
+
+.improvementText {
+  font-size: $font-size-sm;
+  line-height: $line-height-normal;
+  color: $color-text-secondary;
+}

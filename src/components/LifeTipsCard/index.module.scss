@@ -1,0 +1,60 @@
+@use '@/styles/variables.scss' as *;
+
+.lifeTipsCard {
+  margin-bottom: $spacing-lg;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-md;
+}
+
+.cardIcon {
+  font-size: $font-size-xl;
+  margin-right: $spacing-sm;
+}
+
+.cardTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.tipsList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.tipItem {
+  display: flex;
+  align-items: flex-start;
+  padding: $spacing-md;
+  background: $color-bg-hover;
+  border-radius: $radius-md;
+}
+
+.tipIcon {
+  font-size: $font-size-lg;
+  margin-right: $spacing-sm;
+  flex-shrink: 0;
+}
+
+.tipContent {
+  flex: 1;
+}
+
+.tipTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  display: block;
+  margin-bottom: $spacing-xs;
+}
+
+.tipDesc {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: 1.6;
+}
