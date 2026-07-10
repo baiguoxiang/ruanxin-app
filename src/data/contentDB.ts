@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿export interface Joke {
+﻿﻿﻿﻿﻿﻿﻿﻿export interface Joke {
   id: string;
   category: string;
   content: string;
@@ -354,7 +354,7 @@ export const news: News[] = [
     id: '103',
     title: '国产大飞机C919累计交付突破100架',
     content: '中国商飞公司宣布，国产大飞机C919累计交付数量已突破100架。这标志着我国大型客机产业化发展取得重要进展，国产大飞机正在逐步走向全球市场。',
-    category: '科技',
+    category: '科技创新',
     source: '航空工业',
     date: '2026-07-08',
     readTime: 3
@@ -372,7 +372,7 @@ export const news: News[] = [
     id: '105',
     title: '新能源汽车销量首次突破千万辆',
     content: '中国汽车工业协会公布数据，今年上半年新能源汽车销量首次突破千万辆大关，同比增长超过50%。随着充电基础设施的完善，新能源汽车正在成为消费者的首选。',
-    category: '环保',
+    category: '城市建设',
     source: '汽车协会',
     date: '2026-07-08',
     readTime: 3
@@ -381,7 +381,7 @@ export const news: News[] = [
     id: '106',
     title: '教育部推出"智慧校园"建设计划',
     content: '教育部启动"智慧校园"建设计划，将在全国范围内推进校园数字化转型。计划包括智能教学系统、智慧安防、校园物联网等项目，为师生提供更加便捷的学习和生活环境。',
-    category: '教育',
+    category: '文化教育',
     source: '教育部',
     date: '2026-07-08',
     readTime: 3
@@ -408,7 +408,7 @@ export const news: News[] = [
     id: '109',
     title: '5G网络覆盖率突破95%，智慧生活全面升级',
     content: '工信部最新数据显示，全国5G网络覆盖率已突破95%。5G技术的广泛应用正在推动智慧家居、远程医疗、自动驾驶等领域的快速发展，让智慧生活触手可及。',
-    category: '科技',
+    category: '科技创新',
     source: '工信部',
     date: '2026-07-08',
     readTime: 3
@@ -417,7 +417,7 @@ export const news: News[] = [
     id: '1',
     title: '2026年科技创新大会召开，AI成为核心议题',
     content: '2026年全国科技创新大会在北京召开，人工智能成为核心议题。与会专家一致认为，AI技术正在深刻改变各个行业，未来五年将是人工智能发展的关键时期。大会发布了多项支持AI创新的政策措施。',
-    category: '科技',
+    category: '科技创新',
     source: '科技日报',
     date: '2026-07-08',
     readTime: 4
@@ -453,7 +453,7 @@ export const news: News[] = [
     id: '5',
     title: '绿色出行新政策出台，新能源汽车补贴延长',
     content: '为鼓励绿色出行，国家出台新政策，新能源汽车补贴延长至2030年。同时，充电基础设施建设加快推进，计划年内新增充电桩100万个。这将进一步促进新能源汽车的普及。',
-    category: '环保',
+    category: '城市建设',
     source: '汽车行业报',
     date: '2026-07-08',
     readTime: 3
@@ -471,7 +471,7 @@ export const news: News[] = [
     id: '7',
     title: '教育部发布新政策：中小学课后服务全面升级',
     content: '教育部发布新政策，中小学课后服务全面升级。将增加体育、艺术、科技等特色课程，丰富学生课余生活。同时，课后服务时间延长至18:00，方便家长接送。',
-    category: '教育',
+    category: '文化教育',
     source: '教育部官网',
     date: '2026-07-08',
     readTime: 3
@@ -489,7 +489,7 @@ export const news: News[] = [
     id: '9',
     title: '5G应用场景持续拓展，智慧生活触手可及',
     content: '5G技术应用场景持续拓展，智慧家居、智慧交通、智慧医疗等领域取得显著进展。超高速网络为各类智能设备提供了强大支撑，让智慧生活触手可及。',
-    category: '科技',
+    category: '科技创新',
     source: '科技前沿',
     date: '2026-07-08',
     readTime: 3
@@ -525,7 +525,7 @@ export const news: News[] = [
     id: '3',
     title: '5G技术推动智慧城市建设，生活更加便捷',
     content: '随着5G技术的广泛应用，智慧城市建设取得了显著进展。物联网、人工智能、大数据等技术的融合，让城市管理更加高效，居民生活更加便捷。远程医疗、智能交通、智慧教育等应用场景正在改变我们的生活方式。',
-    category: '科技',
+    category: '科技创新',
     source: '科技日报',
     date: '2026-06-29',
     readTime: 3
@@ -561,7 +561,7 @@ export const news: News[] = [
     id: '7',
     title: '新能源汽车销量创新高，绿色出行成为主流',
     content: '随着环保意识的提高和技术的进步，新能源汽车销量持续增长。政府出台的购车补贴、充电基础设施建设等政策，进一步推动了绿色出行的普及。越来越多的消费者选择新能源汽车，为保护环境贡献力量。',
-    category: '环保',
+    category: '城市建设',
     source: '汽车行业报',
     date: '2026-06-25',
     readTime: 3
@@ -588,7 +588,7 @@ export const news: News[] = [
     id: '10',
     title: '教育部推出"双减"政策升级版，减轻学生负担',
     content: '教育部近日推出"双减"政策升级版，进一步减轻学生作业负担和校外培训负担。优化课程设置、提高课堂效率、加强课后服务等措施，旨在让学生享受更快乐的学习生活。',
-    category: '教育',
+    category: '文化教育',
     source: '教育部官网',
     date: '2026-06-22',
     readTime: 3
@@ -606,7 +606,7 @@ export const news: News[] = [
     id: '12',
     title: '绿色能源发展加速，助力碳达峰碳中和',
     content: '我国绿色能源发展取得显著成效，太阳能、风能、水能等清洁能源装机容量持续增长。发展绿色能源不仅有助于实现碳达峰碳中和目标，还能带动相关产业发展，创造更多就业机会。',
-    category: '环保',
+    category: '城市建设',
     source: '能源时报',
     date: '2026-06-20',
     readTime: 3
@@ -624,7 +624,7 @@ export const news: News[] = [
     id: '14',
     title: '量子计算取得新突破，开启计算新时代',
     content: '我国在量子计算领域取得重要突破，量子计算机的运算速度和稳定性都有了显著提升。量子计算有望在密码学、药物研发、气象预报等领域发挥重要作用，开启计算新时代。',
-    category: '科技',
+    category: '科技创新',
     source: '科学通报',
     date: '2026-06-18',
     readTime: 3
@@ -669,7 +669,7 @@ export const news: News[] = [
     id: '19',
     title: '元宇宙技术应用拓展，开启沉浸式体验',
     content: '元宇宙技术正在从概念走向应用。虚拟会议、在线教育、数字娱乐等场景的沉浸式体验，正在改变人们的生活和工作方式。虽然元宇宙还处于发展初期，但它的潜力巨大，值得期待。',
-    category: '科技',
+    category: '科技创新',
     source: '虚拟现实杂志',
     date: '2026-06-13',
     readTime: 3
@@ -678,7 +678,7 @@ export const news: News[] = [
     id: '20',
     title: '家庭教育促进法实施，家长育儿更有方向',
     content: '家庭教育促进法正式实施，为家长育儿提供了明确的指导。家长应当树立正确的家庭教育理念，关注孩子的身心健康，营造良好的家庭环境。家庭教育不仅是父母的责任，也是全社会的共同责任。',
-    category: '教育',
+    category: '文化教育',
     source: '教育时报',
     date: '2026-06-12',
     readTime: 3
@@ -705,7 +705,7 @@ export const news: News[] = [
     id: '23',
     title: '垃圾分类政策深化，环保意识深入人心',
     content: '垃圾分类政策的深化实施，让环保意识深入人心。越来越多的居民养成了垃圾分类的好习惯，垃圾处理效率也得到了显著提高。垃圾分类不仅有利于环境保护，也能促进资源的回收利用。',
-    category: '环保',
+    category: '城市建设',
     source: '环保部',
     date: '2026-06-09',
     readTime: 3
@@ -723,7 +723,7 @@ export const news: News[] = [
     id: '25',
     title: '智能家居走进千家万户，生活更加智能化',
     content: '智能家居正在走进千家万户，让生活更加智能化。智能家电、智能安防、智能照明等产品，通过物联网技术实现互联互通，为居民提供更加便捷、舒适的生活体验。',
-    category: '科技',
+    category: '科技创新',
     source: '智能家居网',
     date: '2026-06-07',
     readTime: 3
@@ -768,7 +768,7 @@ export const news: News[] = [
     id: '30',
     title: '5G+工业互联网推动制造业转型升级',
     content: '5G+工业互联网正在推动制造业的转型升级。通过物联网、大数据、人工智能等技术的融合应用，制造企业实现了生产过程的智能化、精细化管理，提高了生产效率和产品质量。',
-    category: '科技',
+    category: '科技创新',
     source: '工业互联网联盟',
     date: '2026-06-02',
     readTime: 3
@@ -804,7 +804,7 @@ export const news: News[] = [
     id: '34',
     title: '量子通信技术取得突破，信息安全更有保障',
     content: '我国在量子通信技术领域取得重要突破，量子加密通信网络正在逐步建设。这将为信息安全提供更强大的保障，保护个人隐私和国家机密。',
-    category: '科技',
+    category: '科技创新',
     source: '科学日报',
     date: '2026-05-29',
     readTime: 3
@@ -840,7 +840,7 @@ export const news: News[] = [
     id: '38',
     title: '脑机接口技术取得新进展，为残疾人带来福音',
     content: '脑机接口技术取得新进展，能够帮助残疾人通过意念控制设备。这一技术的突破为残疾人带来了福音，让他们能够更加独立地生活和工作。',
-    category: '科技',
+    category: '科技创新',
     source: '科技前沿',
     date: '2026-05-25',
     readTime: 3
@@ -849,7 +849,7 @@ export const news: News[] = [
     id: '39',
     title: '数字经济规模突破百万亿，成为经济增长新引擎',
     content: '我国数字经济规模突破百万亿大关，成为推动经济增长的新引擎。数字经济不仅带动了相关产业的发展，也创造了大量就业机会，为经济发展注入了强大动力。',
-    category: '科技',
+    category: '科技创新',
     source: '统计局',
     date: '2026-05-24',
     readTime: 3
@@ -1260,7 +1260,7 @@ export const localNews: LocalNews[] = [
     id: '1001',
     title: '城市图书馆暑期阅读活动火热开展',
     content: '市图书馆暑期阅读活动正式启动，推出"书香伴成长"系列活动，包括绘本故事会、科普讲座、读书分享会等，吸引众多小朋友参与，丰富暑期文化生活。',
-    category: '教育',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 423
   },
@@ -1268,7 +1268,7 @@ export const localNews: LocalNews[] = [
     id: '1002',
     title: '智慧停车系统上线，市民停车更便捷',
     content: '市区智慧停车管理系统正式上线运行，市民可通过手机APP实时查询停车位、在线缴费，有效解决"停车难"问题，提升城市管理智能化水平。',
-    category: '科技',
+    category: '科技创新',
     date: '2026-07-08',
     likes: 356
   },
@@ -1276,7 +1276,7 @@ export const localNews: LocalNews[] = [
     id: '1003',
     title: '社区义诊活动走进千家万户',
     content: '市卫健委组织医疗专家走进各社区开展免费义诊活动，为居民提供健康咨询、免费体检、常见病诊治等服务，关爱居民身体健康。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 389
   },
@@ -1284,7 +1284,7 @@ export const localNews: LocalNews[] = [
     id: '1004',
     title: '企业创新大赛圆满落幕，多项技术成果获奖',
     content: '市科技局举办的企业创新大赛圆满结束，来自全市的50多家企业参赛，评选出10项优秀创新成果，推动本地产业技术升级。',
-    category: '科技',
+    category: '科技创新',
     date: '2026-07-08',
     likes: 278
   },
@@ -1292,7 +1292,7 @@ export const localNews: LocalNews[] = [
     id: '1005',
     title: '中小学生暑期安全教育讲座开讲',
     content: '市教育局联合消防、交警部门开展暑期安全教育讲座，向学生普及消防安全、交通安全、防溺水等知识，提高学生安全意识。',
-    category: '教育',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 412
   },
@@ -1300,7 +1300,7 @@ export const localNews: LocalNews[] = [
     id: '1006',
     title: '老旧小区改造工程稳步推进',
     content: '今年计划改造的20个老旧小区工程正在稳步推进中，涉及道路修缮、管网改造、绿化提升等项目，预计年底前全部完工，改善居民居住环境。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 334
   },
@@ -1308,7 +1308,7 @@ export const localNews: LocalNews[] = [
     id: '1007',
     title: '新能源公交车投入运营，绿色出行新选择',
     content: '市区新增50辆新能源公交车投入运营，覆盖多条公交线路，零排放、低噪音，为市民提供更加环保舒适的出行体验。',
-    category: '环保',
+    category: '城市建设',
     date: '2026-07-08',
     likes: 298
   },
@@ -1316,7 +1316,7 @@ export const localNews: LocalNews[] = [
     id: '1008',
     title: '创业孵化基地助力青年创业',
     content: '市人社局打造的青年创业孵化基地正式启用，为创业青年提供办公场地、创业指导、融资对接等一站式服务，激发青年创业热情。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 267
   },
@@ -1324,7 +1324,7 @@ export const localNews: LocalNews[] = [
     id: '1009',
     title: '非遗文化展示馆免费开放',
     content: '市非物质文化遗产展示馆正式免费对外开放，展出传统手工艺、民俗文化等百余件展品，让市民近距离感受传统文化魅力。',
-    category: '城市日常',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 378
   },
@@ -1332,7 +1332,7 @@ export const localNews: LocalNews[] = [
     id: '1010',
     title: '智慧校园建设全面启动',
     content: '市教育局启动智慧校园建设计划，将在全市中小学推广智能教学系统、智慧安防等项目，推动教育信息化发展。',
-    category: '科技',
+    category: '科技创新',
     date: '2026-07-08',
     likes: 345
   },
@@ -1340,7 +1340,7 @@ export const localNews: LocalNews[] = [
     id: '1011',
     title: '社区养老服务中心新增多项服务',
     content: '市区各社区养老服务中心新增助餐、助浴、康复护理等多项服务，为老年人提供更加贴心周到的养老服务。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 398
   },
@@ -1348,7 +1348,7 @@ export const localNews: LocalNews[] = [
     id: '1012',
     title: '电商直播基地带动农产品销售',
     content: '市商务局打造的电商直播基地助力本地农产品销售，通过直播带货方式，帮助农户拓宽销售渠道，促进乡村振兴。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 312
   },
@@ -1356,7 +1356,7 @@ export const localNews: LocalNews[] = [
     id: '1013',
     title: '城市绿道建设再添新亮点',
     content: '市区新建5公里城市绿道，串联多个公园和景点，为市民提供休闲健身的好去处，提升城市生态环境品质。',
-    category: '环保',
+    category: '城市建设',
     date: '2026-07-08',
     likes: 367
   },
@@ -1364,7 +1364,7 @@ export const localNews: LocalNews[] = [
     id: '1014',
     title: '青少年科技创新大赛精彩纷呈',
     content: '市科协举办的青少年科技创新大赛吸引了上千名学生参与，展示了众多创意发明和科学实验，培养青少年创新精神。',
-    category: '教育',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 401
   },
@@ -1372,7 +1372,7 @@ export const localNews: LocalNews[] = [
     id: '1015',
     title: '夜间经济活力持续释放',
     content: '市区夜市、商业街夜间经济繁荣，各类特色小吃、文创产品琳琅满目，吸引众多市民和游客，点亮城市夜生活。',
-    category: '城市日常',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 389
   },
@@ -1380,7 +1380,7 @@ export const localNews: LocalNews[] = [
     id: '1016',
     title: '智慧医疗服务平台上线',
     content: '市卫健委推出智慧医疗服务平台，市民可在线预约挂号、查询病历、在线问诊，实现就医"最多跑一次"。',
-    category: '科技',
+    category: '科技创新',
     date: '2026-07-08',
     likes: 356
   },
@@ -1388,7 +1388,7 @@ export const localNews: LocalNews[] = [
     id: '1017',
     title: '关爱留守儿童暑期托管班开班',
     content: '市民政局联合志愿者组织开设留守儿童暑期托管班，为留守儿童提供学习辅导、兴趣培养等服务，让孩子们度过一个快乐充实的暑假。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 432
   },
@@ -1396,7 +1396,7 @@ export const localNews: LocalNews[] = [
     id: '1018',
     title: '垃圾分类宣传活动走进社区',
     content: '市城管局开展垃圾分类宣传活动，通过知识讲座、趣味游戏等形式，提高居民垃圾分类意识，共建美丽家园。',
-    category: '环保',
+    category: '城市建设',
     date: '2026-07-08',
     likes: 323
   },
@@ -1404,7 +1404,7 @@ export const localNews: LocalNews[] = [
     id: '1019',
     title: '高校毕业生就业服务月启动',
     content: '市人社局启动高校毕业生就业服务月活动，举办多场招聘会、就业指导讲座，为毕业生提供就业帮扶，促进高校毕业生就业。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 289
   },
@@ -1412,7 +1412,7 @@ export const localNews: LocalNews[] = [
     id: '1020',
     title: '数字人民币应用场景拓展',
     content: '市区多家商场、超市、餐饮企业开通数字人民币支付功能，市民可体验便捷的数字支付服务，推动数字经济发展。',
-    category: '科技',
+    category: '科技创新',
     date: '2026-07-08',
     likes: 345
   },
@@ -1420,7 +1420,7 @@ export const localNews: LocalNews[] = [
     id: '1021',
     title: '城市书房24小时开放',
     content: '市图书馆推出城市书房24小时开放服务，配备自助借还设备、舒适阅读区，为市民提供全天候阅读空间。',
-    category: '便民',
+    category: '生活娱乐',
     date: '2026-07-08',
     likes: 378
   },
@@ -1428,7 +1428,7 @@ export const localNews: LocalNews[] = [
     id: '1022',
     title: '中小学课后服务全面升级',
     content: '市教育局全面升级中小学课后服务，增加体育、艺术、科技等特色课程，丰富学生课余生活，减轻家长负担。',
-    category: '教育',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 412
   },
@@ -1436,7 +1436,7 @@ export const localNews: LocalNews[] = [
     id: '1023',
     title: '残疾人就业帮扶政策落地见效',
     content: '市残联出台残疾人就业帮扶政策，通过职业技能培训、岗位推荐等方式，帮助残疾人实现就业，保障残疾人权益。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 356
   },
@@ -1444,7 +1444,7 @@ export const localNews: LocalNews[] = [
     id: '1024',
     title: '5G基站建设覆盖城区',
     content: '市区5G基站建设全面完成，实现城区5G网络全覆盖，为市民提供高速网络体验，助力智慧城市建设。',
-    category: '科技',
+    category: '科技创新',
     date: '2026-07-08',
     likes: 323
   },
@@ -1452,7 +1452,7 @@ export const localNews: LocalNews[] = [
     id: '1025',
     title: '社区文化艺术节精彩上演',
     content: '市文旅局举办的社区文化艺术节在各大社区精彩上演，涵盖歌舞、戏曲、书画等多种艺术形式，丰富市民文化生活。',
-    category: '城市日常',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 389
   },
@@ -1460,7 +1460,7 @@ export const localNews: LocalNews[] = [
     id: '1026',
     title: '食品安全专项检查保障市民健康',
     content: '市市场监管局开展食品安全专项检查，重点检查农贸市场、餐饮单位、学校食堂等，严厉打击食品安全违法行为。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 401
   },
@@ -1468,7 +1468,7 @@ export const localNews: LocalNews[] = [
     id: '1027',
     title: '绿色建筑标准推广实施',
     content: '市住建局推广绿色建筑标准，新建建筑将按照绿色建筑设计规范建设，节约能源资源，减少环境污染。',
-    category: '环保',
+    category: '城市建设',
     date: '2026-07-08',
     likes: 278
   },
@@ -1476,7 +1476,7 @@ export const localNews: LocalNews[] = [
     id: '1028',
     title: '市民热线服务质量提升',
     content: '市政务服务中心提升市民热线服务质量，优化接线流程，提高问题办结率，为市民提供更加高效便捷的服务。',
-    category: '便民',
+    category: '生活娱乐',
     date: '2026-07-08',
     likes: 334
   },
@@ -1484,7 +1484,7 @@ export const localNews: LocalNews[] = [
     id: '1029',
     title: '校园足球联赛火热进行',
     content: '市教育局举办的校园足球联赛正在火热进行中，来自全市各中小学的足球队展开激烈角逐，推动校园足球发展。',
-    category: '教育',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 312
   },
@@ -1492,7 +1492,7 @@ export const localNews: LocalNews[] = [
     id: '1030',
     title: '家政服务行业规范化发展',
     content: '市商务局出台家政服务行业规范，加强从业人员培训，提高服务质量，促进家政服务行业健康发展。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 289
   },
@@ -1500,7 +1500,7 @@ export const localNews: LocalNews[] = [
     id: '1031',
     title: '人工智能体验馆对外开放',
     content: '市科技馆人工智能体验馆正式对外开放，展示AI技术在各领域的应用，让市民感受科技魅力，激发创新热情。',
-    category: '科技',
+    category: '科技创新',
     date: '2026-07-08',
     likes: 367
   },
@@ -1508,7 +1508,7 @@ export const localNews: LocalNews[] = [
     id: '1032',
     title: '老年人智能手机培训课堂开课',
     content: '市老龄办开设老年人智能手机培训课堂，帮助老年人学习使用智能手机，跨越数字鸿沟，享受智能生活。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 398
   },
@@ -1516,7 +1516,7 @@ export const localNews: LocalNews[] = [
     id: '1033',
     title: '湿地公园生态保护成效显著',
     content: '市林业局加强湿地公园生态保护，湿地面积扩大，候鸟数量增加，生态环境持续改善，成为市民休闲好去处。',
-    category: '环保',
+    category: '城市建设',
     date: '2026-07-08',
     likes: 345
   },
@@ -1524,7 +1524,7 @@ export const localNews: LocalNews[] = [
     id: '1034',
     title: '职业技能培训助力就业创业',
     content: '市人社局开展职业技能培训，涵盖电工、焊工、家政服务等多个工种，提升劳动者技能水平，促进就业创业。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 278
   },
@@ -1532,7 +1532,7 @@ export const localNews: LocalNews[] = [
     id: '1035',
     title: '城市夜景照明升级改造',
     content: '市城管局对城市夜景照明进行升级改造，采用节能LED灯具，打造绚丽夜景，提升城市形象和夜间安全。',
-    category: '城市日常',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 356
   },
@@ -1540,7 +1540,7 @@ export const localNews: LocalNews[] = [
     id: '1036',
     title: '医保电子凭证全面推广',
     content: '市医保局全面推广医保电子凭证，市民可通过手机扫码就医购药，实现医保结算"码上办"，方便快捷。',
-    category: '便民',
+    category: '生活娱乐',
     date: '2026-07-08',
     likes: 423
   },
@@ -1548,7 +1548,7 @@ export const localNews: LocalNews[] = [
     id: '1037',
     title: '青少年心理健康辅导中心成立',
     content: '市卫健委成立青少年心理健康辅导中心，为青少年提供心理咨询、心理疏导等服务，关爱青少年心理健康。',
-    category: '教育',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 389
   },
@@ -1556,7 +1556,7 @@ export const localNews: LocalNews[] = [
     id: '1038',
     title: '小微企业融资服务平台上线',
     content: '市金融办推出小微企业融资服务平台，整合银行、担保公司等资源，为小微企业提供一站式融资服务，缓解融资难题。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 312
   },
@@ -1564,7 +1564,7 @@ export const localNews: LocalNews[] = [
     id: '1039',
     title: '智慧农业示范基地建设',
     content: '市农业农村局建设智慧农业示范基地，推广物联网、大数据等技术在农业生产中的应用，提升农业生产效率。',
-    category: '科技',
+    category: '科技创新',
     date: '2026-07-08',
     likes: 298
   },
@@ -1572,7 +1572,7 @@ export const localNews: LocalNews[] = [
     id: '1040',
     title: '文明城市创建成果丰硕',
     content: '市文明办开展文明城市创建活动，市民文明素质提升，城市环境改善，成功获评全国文明城市提名城市。',
-    category: '城市日常',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 432
   },
@@ -1580,7 +1580,7 @@ export const localNews: LocalNews[] = [
     id: '1041',
     title: '公共体育场馆免费开放',
     content: '市体育局推出公共体育场馆免费开放政策，体育馆、游泳馆等公共体育设施向市民免费开放，促进全民健身。',
-    category: '便民',
+    category: '生活娱乐',
     date: '2026-07-08',
     likes: 378
   },
@@ -1588,7 +1588,7 @@ export const localNews: LocalNews[] = [
     id: '1042',
     title: '幼儿园扩容工程启动',
     content: '市教育局启动幼儿园扩容工程，计划新建和改扩建20所幼儿园，增加学位供给，缓解"入园难"问题。',
-    category: '教育',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 401
   },
@@ -1596,7 +1596,7 @@ export const localNews: LocalNews[] = [
     id: '1043',
     title: '退役军人就业创业服务月活动',
     content: '市退役军人事务局开展退役军人就业创业服务月活动，举办专场招聘会、创业培训，为退役军人提供就业创业支持。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 356
   },
@@ -1604,7 +1604,7 @@ export const localNews: LocalNews[] = [
     id: '1044',
     title: '智慧交通管理系统升级',
     content: '市交警支队升级智慧交通管理系统，新增交通流量监测、智能信号控制等功能，提升城市交通管理水平。',
-    category: '科技',
+    category: '科技创新',
     date: '2026-07-08',
     likes: 323
   },
@@ -1612,7 +1612,7 @@ export const localNews: LocalNews[] = [
     id: '1045',
     title: '文化惠民演出走进乡村',
     content: '市文旅局组织文化惠民演出走进乡村，为农民朋友送上精彩的文艺节目，丰富农村文化生活。',
-    category: '城市日常',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 389
   },
@@ -1620,7 +1620,7 @@ export const localNews: LocalNews[] = [
     id: '1046',
     title: '老旧管网改造工程惠及万户',
     content: '市住建局实施老旧管网改造工程，更换老化供水管网、燃气管网，保障居民用水用气安全，提升城市基础设施水平。',
-    category: '民生',
+    category: '民生政策',
     date: '2026-07-08',
     likes: 334
   },
@@ -1628,7 +1628,7 @@ export const localNews: LocalNews[] = [
     id: '1047',
     title: '新能源产业园区建设提速',
     content: '市发改委加快新能源产业园区建设，吸引多家新能源企业入驻，推动新能源产业发展，助力碳达峰碳中和。',
-    category: '环保',
+    category: '城市建设',
     date: '2026-07-08',
     likes: 278
   },
@@ -1636,7 +1636,7 @@ export const localNews: LocalNews[] = [
     id: '1048',
     title: '社保卡"一卡通"应用拓展',
     content: '市人社局拓展社保卡"一卡通"应用，社保卡可用于公交出行、图书馆借阅、医院就诊等多个场景，方便市民生活。',
-    category: '便民',
+    category: '生活娱乐',
     date: '2026-07-08',
     likes: 367
   },
@@ -1644,7 +1644,7 @@ export const localNews: LocalNews[] = [
     id: '1049',
     title: '校园安全专项整治行动',
     content: '市教育局联合公安部门开展校园安全专项整治行动，排查安全隐患，加强校园安保，保障师生安全。',
-    category: '教育',
+    category: '文化教育',
     date: '2026-07-08',
     likes: 412
   },
@@ -1652,7 +1652,7 @@ export const localNews: LocalNews[] = [
     id: '1050',
     title: '社区垃圾分类投放点升级',
     content: '市城管局升级社区垃圾分类投放点，配备智能垃圾分类设备、垃圾分类督导员，提高垃圾分类准确率。',
-    category: '环保',
+    category: '城市建设',
     date: '2026-07-08',
     likes: 312
   },
@@ -1660,7 +1660,7 @@ export const localNews: LocalNews[] = [
     id: '1',
     title: '运城首家24小时图书馆开放',
     content: '运城市图书馆正式开放24小时借阅服务，市民可以全天候享受阅读乐趣。图书馆配备了舒适的阅读区、自助借还设备，为夜读者提供了温馨的阅读环境。',
-    category: '便民',
+    category: '生活娱乐',
     date: '2026-07-01',
     likes: 234
   },
@@ -1668,7 +1668,7 @@ export const localNews: LocalNews[] = [
     id: '2',
     title: '运城好人张阿姨照顾孤寡老人十年如一日',
     content: '盐湖区居民张阿姨十年如一日照顾社区孤寡老人李大爷，每天送饭、打扫卫生、陪老人聊天。她的善举感动了整个社区，被评为"运城好人"。',
-    category: '好人好事',
+    category: '民生政策',
     date: '2026-06-30',
     likes: 356
   },
@@ -1676,7 +1676,7 @@ export const localNews: LocalNews[] = [
     id: '3',
     title: '万达广场夜市热闹非凡',
     content: '运城万达广场夜市正式开市，各种特色小吃、手工艺品琳琅满目。市民们纷纷前来打卡，感受夏日夜晚的热闹氛围。',
-    category: '城市日常',
+    category: '文化教育',
     date: '2026-06-29',
     likes: 189
   },
@@ -1684,7 +1684,7 @@ export const localNews: LocalNews[] = [
     id: '4',
     title: '公交线路优化调整，市民出行更便捷',
     content: '运城市公交公司对3路、8路、12路等多条线路进行优化调整，新增多个站点，缩短了市民出行时间，方便了市民日常通勤。',
-    category: '便民',
+    category: '生活娱乐',
     date: '2026-06-28',
     likes: 212
   },
@@ -1692,7 +1692,7 @@ export const localNews: LocalNews[] = [
     id: '5',
     title: '少年勇救落水儿童，彰显正能量',
     content: '运城中学学生小王在公园游玩时，发现一名儿童不慎落水，他毫不犹豫跳入水中将孩子救起。事后他说："这是我应该做的。"',
-    category: '好人好事',
+    category: '民生政策',
     date: '2026-06-27',
     likes: 421
   },
@@ -1700,7 +1700,7 @@ export const localNews: LocalNews[] = [
     id: '6',
     title: '南风广场举办夏日纳凉晚会',
     content: '南风广场连续一周举办夏日纳凉晚会，精彩的歌舞表演、相声小品吸引了众多市民前来观看，成为市民消暑娱乐的好去处。',
-    category: '城市日常',
+    category: '文化教育',
     date: '2026-06-26',
     likes: 178
   },
@@ -1708,7 +1708,7 @@ export const localNews: LocalNews[] = [
     id: '7',
     title: '政务服务大厅推出"一次办好"服务',
     content: '运城市政务服务大厅推出"一次办好"服务承诺，简化办事流程，压缩办理时间，让市民办事更加高效便捷。',
-    category: '便民',
+    category: '生活娱乐',
     date: '2026-06-25',
     likes: 267
   },
@@ -1716,7 +1716,7 @@ export const localNews: LocalNews[] = [
     id: '8',
     title: '社区志愿者义务清理小区环境',
     content: '河东社区组织志愿者开展环境清理活动，大家齐心协力清理小区垃圾、修剪花草，让小区环境焕然一新。',
-    category: '好人好事',
+    category: '民生政策',
     date: '2026-06-24',
     likes: 198
   },
@@ -1724,7 +1724,7 @@ export const localNews: LocalNews[] = [
     id: '9',
     title: '运城植物园迎来最美赏花季',
     content: '运城植物园内各种花卉竞相开放，郁金香、牡丹、樱花等争奇斗艳，吸引了众多市民前来赏花拍照。',
-    category: '城市日常',
+    category: '文化教育',
     date: '2026-06-23',
     likes: 245
   },
@@ -1732,7 +1732,7 @@ export const localNews: LocalNews[] = [
     id: '10',
     title: '爱心企业捐赠物资助力贫困学子',
     content: '运城某爱心企业向贫困地区学校捐赠了价值20万元的学习用品和体育器材，帮助孩子们改善学习条件。',
-    category: '好人好事',
+    category: '民生政策',
     date: '2026-06-22',
     likes: 312
   },
@@ -1740,7 +1740,7 @@ export const localNews: LocalNews[] = [
     id: '11',
     title: '市区新增多处免费停车场',
     content: '为缓解停车难问题，运城市区新增3处免费停车场，共提供500个停车位，方便市民出行停车。',
-    category: '便民',
+    category: '生活娱乐',
     date: '2026-06-21',
     likes: 289
   },
@@ -1748,7 +1748,7 @@ export const localNews: LocalNews[] = [
     id: '12',
     title: '街头艺人献艺，传递温暖',
     content: '一位盲人歌手在解放路街头演唱励志歌曲，歌声温暖动人，不少市民驻足聆听并慷慨解囊。',
-    category: '好人好事',
+    category: '民生政策',
     date: '2026-06-20',
     likes: 223
   },
@@ -1756,7 +1756,7 @@ export const localNews: LocalNews[] = [
     id: '13',
     title: '运城博物馆举办非遗文化展',
     content: '运城博物馆举办"非遗文化进校园"主题展览，展示了河东皮影、绛州鼓乐等非物质文化遗产，让市民感受传统文化魅力。',
-    category: '城市日常',
+    category: '文化教育',
     date: '2026-06-19',
     likes: 167
   },
@@ -1764,7 +1764,7 @@ export const localNews: LocalNews[] = [
     id: '14',
     title: '环卫工人收到爱心凉茶',
     content: '炎炎夏日，运城爱心商家为环卫工人送去清凉解暑的凉茶和防暑用品，感谢他们为城市清洁付出的辛勤劳动。',
-    category: '好人好事',
+    category: '民生政策',
     date: '2026-06-18',
     likes: 301
   },
@@ -1772,13 +1772,61 @@ export const localNews: LocalNews[] = [
     id: '15',
     title: '共享单车投放新区域',
     content: '运城市新增投放1000辆共享单车，覆盖高新区、经济开发区等区域，方便市民短途出行。',
-    category: '便民',
-    date: '2026-06-17',
+    category: '生活娱乐',
+    date: '2026-07-08',
     likes: 256
+  },
+  {
+    id: '2001',
+    title: '夏季养生指南：专家教你科学防暑降温',
+    content: '市卫健委发布夏季养生指南，提醒市民注意防暑降温，合理饮食，适量运动，保持良好心态，平安度夏。',
+    category: '健康资讯',
+    date: '2026-07-08',
+    likes: 423
+  },
+  {
+    id: '2002',
+    title: '心理健康咨询服务进社区',
+    content: '市心理咨询中心在各社区设立咨询点，为居民提供免费心理健康咨询服务，帮助市民缓解压力，保持心理健康。',
+    category: '健康资讯',
+    date: '2026-07-08',
+    likes: 389
+  },
+  {
+    id: '2003',
+    title: '老年人健康体检活动全面开展',
+    content: '市卫健委组织老年人免费健康体检活动，为65岁以上老年人提供全面体检服务，关爱老年人身体健康。',
+    category: '健康资讯',
+    date: '2026-07-08',
+    likes: 412
+  },
+  {
+    id: '2004',
+    title: '全民健康生活方式宣传周启动',
+    content: '市疾控中心启动全民健康生活方式宣传周活动，通过健康讲座、义诊咨询等形式，倡导健康生活方式。',
+    category: '健康资讯',
+    date: '2026-07-08',
+    likes: 367
+  },
+  {
+    id: '2005',
+    title: '中医药健康文化推广活动',
+    content: '市中医院开展中医药健康文化推广活动，普及中医药知识，推广中医养生保健方法，弘扬中华传统医学。',
+    category: '健康资讯',
+    date: '2026-07-08',
+    likes: 345
+  },
+  {
+    id: '2006',
+    title: '食品安全科普宣传走进校园',
+    content: '市市场监管局开展食品安全科普宣传活动，走进中小学，向学生普及食品安全知识，培养健康饮食习惯。',
+    category: '健康资讯',
+    date: '2026-07-08',
+    likes: 398
   }
 ];
 
-export const localNewsCategories = ['全部', '便民', '好人好事', '城市日常'];
+export const localNewsCategories = ['全部', '民生政策', '健康资讯', '生活娱乐', '城市建设', '科技创新', '文化教育'];
 
 export function getLocalNewsByCategory(category: string): LocalNews[] {
   if (category === '全部') {

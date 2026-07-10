@@ -4,3 +4,15 @@
   padding: 16px;
   padding-bottom: 80px;
 }
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.loadingText {
+  font-size: 28rpx;
+  color: #666;
+}
