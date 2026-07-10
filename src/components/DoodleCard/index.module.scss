@@ -1,4 +1,4 @@
-.doodleCard {
+﻿.doodleCard {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 20px;
   padding: 15px;
@@ -18,21 +18,21 @@
 }
 
 .title {
-  font-size: 22px;
+  font-size: 44rpx;
   font-weight: bold;
   margin: 0;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .subtitle {
-  font-size: 12px;
+  font-size: 24rpx;
   opacity: 0.9;
   margin: 4px 0 0;
 }
 
 .saveStatus {
   display: block;
-  font-size: 12px;
+  font-size: 24rpx;
   margin-top: 4px;
   animation: fadeInOut 2s ease;
 }
@@ -77,7 +77,7 @@
 }
 
 .label {
-  font-size: 12px;
+  font-size: 24rpx;
   font-weight: 600;
   opacity: 0.9;
   margin-left: 4px;
@@ -167,7 +167,7 @@
   border-radius: 10px;
   border: none;
   background: rgba(255, 255, 255, 0.25);
-  font-size: 18px;
+  font-size: 36rpx;
   cursor: pointer;
   display: flex;
   align-items: center;

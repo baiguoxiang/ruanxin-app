@@ -1,4 +1,4 @@
-.goodnightCard {
+﻿.goodnightCard {
   background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
   color: #fff;
 }
@@ -11,17 +11,17 @@
 }
 
 .cardIcon {
-  font-size: 20px;
+  font-size: 40rpx;
 }
 
 .cardTitle {
-  font-size: 16px;
+  font-size: 32rpx;
   font-weight: bold;
 }
 
 .cardTime {
   margin-left: auto;
-  font-size: 12px;
+  font-size: 24rpx;
   opacity: 0.7;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .airHostessEmoji {
-  font-size: 48px;
+  font-size: 96rpx;
   display: inline-block;
   transform-origin: bottom center;
   animation: bow 2.4s ease-in-out infinite;
@@ -74,7 +74,7 @@
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.95);
   color: #302b63;
-  font-size: 12px;
+  font-size: 24rpx;
   padding: 4px 12px;
   border-radius: 16px;
   white-space: nowrap;
@@ -116,7 +116,7 @@
 }
 
 .moodText {
-  font-size: 12px;
+  font-size: 24rpx;
   color: #FFD93D;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .goodnightText {
-  font-size: 18px;
+  font-size: 36rpx;
   line-height: 1.6;
   font-weight: 500;
 }
@@ -139,7 +139,7 @@
 }
 
 .star {
-  font-size: 20px;
+  font-size: 40rpx;
   animation: twinkle 2s infinite;
   
   &:nth-child(2) { animation-delay: 0.3s; }

@@ -1,4 +1,4 @@
-.pageContainer {
+﻿.pageContainer {
   min-height: 100vh;
   background: linear-gradient(180deg, #F5F5F5 0%, #FAFAFA 100%);
   padding: 16px;
@@ -25,7 +25,7 @@
 }
 
 .avatarIcon {
-  font-size: 32px;
+  font-size: 64rpx;
 }
 
 .userInfo {
@@ -34,13 +34,13 @@
 
 .userName {
   display: block;
-  font-size: 18px;
+  font-size: 36rpx;
   font-weight: bold;
   margin-bottom: 4px;
 }
 
 .userLevel {
-  font-size: 12px;
+  font-size: 24rpx;
   opacity: 0.8;
 }
 
@@ -50,7 +50,7 @@
   border: 1px solid #fff;
   background: transparent;
   color: #fff;
-  font-size: 13px;
+  font-size: 26rpx;
   cursor: pointer;
 }
 
@@ -69,17 +69,17 @@
 }
 
 .menuIcon {
-  font-size: 20px;
+  font-size: 40rpx;
   margin-right: 12px;
 }
 
 .menuText {
   flex: 1;
-  font-size: 15px;
+  font-size: 30rpx;
 }
 
 .menuArrow {
-  font-size: 20px;
+  font-size: 40rpx;
   color: #ccc;
 }
 
@@ -97,7 +97,7 @@
   padding: 10px;
   border: none;
   background: none;
-  font-size: 14px;
+  font-size: 28rpx;
   border-bottom: 2px solid transparent;
   cursor: pointer;
   
@@ -117,18 +117,18 @@
 }
 
 .emptyIcon {
-  font-size: 48px;
+  font-size: 96rpx;
   margin-bottom: 12px;
 }
 
 .emptyText {
-  font-size: 14px;
+  font-size: 28rpx;
   color: #999;
   margin-bottom: 8px;
 }
 
 .emptyHint {
-  font-size: 12px;
+  font-size: 24rpx;
   color: #ccc;
 }
 
@@ -137,7 +137,7 @@
   background: #FF6B6B;
   color: #fff;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 24rpx;
   margin-right: 8px;
 }
 
@@ -157,7 +157,7 @@
 }
 
 .itemIcon {
-  font-size: 24px;
+  font-size: 48rpx;
   margin-right: 12px;
 }
 
@@ -168,7 +168,7 @@
 
 .itemTitle {
   display: block;
-  font-size: 14px;
+  font-size: 28rpx;
   color: #333;
   margin-bottom: 4px;
   overflow: hidden;
@@ -183,7 +183,7 @@
 }
 
 .itemType {
-  font-size: 12px;
+  font-size: 24rpx;
   color: #7B68EE;
   background: rgba(123, 104, 238, 0.1);
   padding: 2px 8px;
@@ -191,7 +191,7 @@
 }
 
 .itemTime {
-  font-size: 12px;
+  font-size: 24rpx;
   color: #999;
 }
 
@@ -201,7 +201,7 @@
   border: none;
   background: #f5f5f5;
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 36rpx;
   color: #999;
   display: flex;
   align-items: center;
@@ -221,7 +221,7 @@
   background: #f5f5f5;
   color: #999;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 28rpx;
   margin-top: 16px;
   
   &:active {
