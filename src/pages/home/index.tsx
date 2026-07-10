@@ -30,7 +30,7 @@ import { getTodayEncouragement } from '@/data/encouragementDB';
 import styles from './index.module.scss';
 import generateDefaultContent from '@/data/generateContent';
 
-const AUTO_UPDATE_HOUR = 6;
+const AUTO_UPDATE_HOUR = 10;
 const AUTO_UPDATE_MINUTE = 0;
 
 interface FeatureItem {
