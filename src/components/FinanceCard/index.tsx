@@ -35,7 +35,6 @@ export default function FinanceCard({ isLocked, onUnlock }: FinanceCardProps) {
   const [isRecording, setIsRecording] = useState(false);
   const [showBook, setShowBook] = useState(false);
   const [currentBook, setCurrentBook] = useState(getRandomFinanceBook());
-  const [expandedDates, setExpandedDates] = useState<Set<string>>(new Set([today]));
 
   const today = useMemo(() => {
     const now = new Date();
@@ -223,18 +222,6 @@ export default function FinanceCard({ isLocked, onUnlock }: FinanceCardProps) {
     return cat ? cat.icon : '📝';
   };
 
-  const toggleDate = (date: string) => {
-    setExpandedDates(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(date)) {
-        newSet.delete(date);
-      } else {
-        newSet.add(date);
-      }
-      return newSet;
-    });
-  };
-
   return (
     <View className={styles.cardContainer}>
       <Card className={styles.financeCard} padding="lg">
@@ -295,48 +282,37 @@ export default function FinanceCard({ isLocked, onUnlock }: FinanceCardProps) {
                     </View>
                   </View>
                   <View className={styles.recordsList}>
-                    {groupedRecords.map((dailyGroup: DailyRecords) => {
-                      const isExpanded = expandedDates.has(dailyGroup.date);
-                      return (
-                        <View key={dailyGroup.date} className={styles.dateGroup}>
-                          <View 
-                            className={styles.dateHeader} 
-                            onClick={() => toggleDate(dailyGroup.date)}
-                          >
-                            <Text className={styles.dateTitle}>
-                              {dailyGroup.date === today ? '今天' : dailyGroup.date}
-                            </Text>
-                            <View className={styles.dateSummary}>
-                              {dailyGroup.income > 0 && <Text style={{ color: '#10b981' }}>+¥{dailyGroup.income.toFixed(2)}</Text>}
-                              {dailyGroup.expense > 0 && <Text style={{ color: '#ef4444', marginLeft: '8px' }}>-¥{dailyGroup.expense.toFixed(2)}</Text>}
-                            </View>
-                            <Text className={styles.expandIcon}>
-                              {isExpanded ? '▼' : '▶'}
-                            </Text>
-                          </View>
-                          {isExpanded && (
-                            <View className={styles.dateRecords}>
-                              {dailyGroup.records.map(record => (
-                                <View key={record.id} className={styles.recordItem}>
-                                  <Text className={styles.recordIcon}>
-                                    {getCategoryIcon(record.category, record.type)}
-                                  </Text>
-                                  <View className={styles.recordInfo}>
-                                    <Text className={styles.recordDescription}>
-                                      {record.description || record.category}
-                                    </Text>
-                                    <Text className={styles.recordCategory}>{record.category}</Text>
-                                  </View>
-                                  <Text className={`${styles.recordAmount} ${record.type === 'income' ? styles.income : styles.expense}`}>
-                                    {record.type === 'income' ? '+' : '-'}¥{record.amount.toFixed(2)}
-                                  </Text>
-                                </View>
-                              ))}
-                            </View>
-                          )}
+                    {groupedRecords.map((dailyGroup: DailyRecords) => (
+                      <View key={dailyGroup.date} className={styles.dateGroup}>
+                        <View className={styles.dateHeader}>
+                          <Text className={styles.dateTitle}>
+                            {dailyGroup.date === today ? '今天' : dailyGroup.date}
+                          </Text>
+                          <Text className={styles.dateSummary}>
+                            {dailyGroup.income > 0 && <Text style={{ color: '#10b981' }}>+¥{dailyGroup.income.toFixed(2)}</Text>}
+                            {dailyGroup.expense > 0 && <Text style={{ color: '#ef4444', marginLeft: '8px' }}>-¥{dailyGroup.expense.toFixed(2)}</Text>}
+                          </Text>
                         </View>
-                      );
-                    })}
+                        <View className={styles.dateRecords}>
+                          {dailyGroup.records.map(record => (
+                            <View key={record.id} className={styles.recordItem}>
+                              <Text className={styles.recordIcon}>
+                                {getCategoryIcon(record.category, record.type)}
+                              </Text>
+                              <View className={styles.recordInfo}>
+                                <Text className={styles.recordDescription}>
+                                  {record.description || record.category}
+                                </Text>
+                                <Text className={styles.recordCategory}>{record.category}</Text>
+                              </View>
+                              <Text className={`${styles.recordAmount} ${record.type === 'income' ? styles.income : styles.expense}`}>
+                                {record.type === 'income' ? '+' : '-'}¥{record.amount.toFixed(2)}
+                              </Text>
+                            </View>
+                          ))}
+                        </View>
+                      </View>
+                    ))}
                   </View>
                 </View>
               )}

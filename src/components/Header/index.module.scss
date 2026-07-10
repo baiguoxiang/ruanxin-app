@@ -2,8 +2,8 @@
 
 .header {
   background: $color-primary-gradient;
-  padding: $spacing-lg $spacing-lg;
-  padding-top: calc($spacing-lg + env(safe-area-inset-top));
+  padding: $spacing-xl $spacing-lg;
+  padding-top: calc($spacing-xl + env(safe-area-inset-top));
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -50,8 +50,8 @@
 
 .mascotRow {
   display: flex;
-  gap: $spacing-md;
-  margin-bottom: $spacing-xs;
+  gap: $spacing-lg;
+  margin-bottom: $spacing-md;
 }
 
 .mascotItem {
@@ -195,97 +195,10 @@
   margin-left: 4rpx;
 }
 
-.sloganWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8rpx;
-  margin-top: $spacing-xs;
-  margin-bottom: 4rpx;
-  padding: 6rpx $spacing-md;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: $radius-lg;
-  backdrop-filter: blur(10rpx);
-}
-
-.sloganIcon {
-  font-size: $font-size-lg;
-  animation: twinkle 2s ease-in-out infinite;
-  filter: drop-shadow(0 0 10rpx rgba(255, 215, 0, 0.6));
-}
-
-.sloganIcon:last-child {
-  animation-delay: 0.5s;
-}
-
-@keyframes twinkle {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(0.9);
-  }
-}
-
-.sloganText {
-  font-size: $font-size-sm;
-  font-weight: $font-weight-medium;
-  color: #FFF8DC;
-  text-shadow: 
-    0 0 10rpx rgba(255, 215, 0, 0.8),
-    0 0 20rpx rgba(255, 215, 0, 0.6),
-    0 0 40rpx rgba(255, 215, 0, 0.4),
-    0 2rpx 8rpx rgba(0, 0, 0, 0.2);
-  letter-spacing: 1rpx;
-  line-height: 1.5;
-  background: linear-gradient(90deg, #FFF8DC 0%, #FFD700 50%, #FFF8DC 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: glow 3s ease-in-out infinite;
-}
-
-@keyframes glow {
-  0%, 100% {
-    filter: brightness(1);
-  }
-  50% {
-    filter: brightness(1.2);
-  }
-}
-
-.privacyTips {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8rpx;
-  padding: 8rpx $spacing-md;
-  background: rgba(100, 200, 100, 0.15);
-  border-radius: $radius-md;
-  border: 1rpx solid rgba(100, 200, 100, 0.3);
-}
-
-.privacyIcon {
-  font-size: $font-size-sm;
-  animation: lockPulse 2s ease-in-out infinite;
-}
-
-@keyframes lockPulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-.privacyText {
-  font-size: $font-size-xs;
-  color: #B2FFB2;
-  font-weight: $font-weight-medium;
-  text-shadow: 0 0 10rpx rgba(100, 200, 100, 0.6);
+.headerSubtitle {
+  font-size: $font-size-md;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1rpx 4rpx rgba(0, 0, 0, 0.1);
 }
 
 .memberButtons {

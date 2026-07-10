@@ -1,27 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text } from '@tarojs/components';
+import React from 'react';
+import { View } from '@tarojs/components';
 import LocalNewsCard from '@/components/LocalNewsCard';
 import ContentCard from '@/components/ContentCard';
 import WeatherCard from '@/components/WeatherCard';
-import { getCurrentCity } from '@/utils/location';
 import styles from './index.module.scss';
 
 export default function LocalPage() {
-  const [city, setCity] = useState('获取中...');
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    getCurrentCity().then(cityName => {
-      setCity(cityName);
-      setIsLoading(false);
-    }).catch(() => {
-      setCity('北京');
-      setIsLoading(false);
-    });
-  }, []);
-
   const mockWeather = {
-    city: city,
+    city: '我的城市',
     temperature: '24°C',
     weather: '晴',
     wind: '微风',
@@ -37,12 +23,7 @@ export default function LocalPage() {
         isMember={true} 
         onUnlock={() => {}} 
       />
-      {isLoading && (
-        <View className={styles.loadingContainer}>
-          <Text className={styles.loadingText}>正在定位您的城市...</Text>
-        </View>
-      )}
-      <LocalNewsCard city={city} />
+      <LocalNewsCard />
       <ContentCard type="news" />
     </View>
   );

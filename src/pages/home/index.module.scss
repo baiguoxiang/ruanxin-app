@@ -3,7 +3,7 @@
 .page {
   min-height: 100vh;
   background: $color-bg-gradient;
-  padding-bottom: calc(400rpx + env(safe-area-inset-bottom));
+  padding-bottom: calc(140rpx + env(safe-area-inset-bottom));
 }
 
 .greetingCard {

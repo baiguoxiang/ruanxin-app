@@ -19,6 +19,7 @@ import {
   News,
   EmotionalArticle
 } from '@/data/contentDB'
+import { getDailySeed, seededRandom } from '@/utils/dailyRandom'
 import styles from './index.module.scss'
 
 type TabType = 'jokes' | 'stories' | 'news' | 'articles'
@@ -39,38 +40,88 @@ export default function ContentCard({ type }: ContentCardProps) {
     articles: emotionalArticleCategories
   }
 
-  const getCurrentContent = () => {
-    switch (activeTab) {
-      case 'jokes':
-        return getJokesByCategory(currentCategory)
-      case 'stories':
-        return getStoriesByCategory(currentCategory)
-      case 'news':
-        return getNewsByCategory(currentCategory)
-      case 'articles':
-        return getEmotionalArticlesByCategory(currentCategory)
-      default:
-        return []
-    }
+  const filteredContent = {
+    jokes: getJokesByCategory(currentCategory),
+    stories: getStoriesByCategory(currentCategory),
+    news: getNewsByCategory(currentCategory),
+    articles: getEmotionalArticlesByCategory(currentCategory)
   }
 
-  const currentContent = getCurrentContent()
-  const total = currentContent.length
-  const displayIndex = total > 0 ? currentIndex % total : 0
-  const currentItem = total > 0 ? currentContent[displayIndex] : null
-
   useEffect(() => {
-    setCurrentIndex(0)
+    const seedOffset = {
+      jokes: 0,
+      stories: 1000,
+      news: 2000,
+      articles: 3000
+    }
+    const seed = getDailySeed() + seedOffset[activeTab]
+    const random = seededRandom(seed)
+    const total = filteredContent[activeTab].length
+    const dailyIndex = total > 0 ? Math.floor(random() * total) : 0
+    setCurrentIndex(dailyIndex)
   }, [activeTab, currentCategory])
 
+  useEffect(() => {
+    const updateContent = () => {
+      const today = getDailySeed()
+      const seedOffset = {
+        jokes: 0,
+        stories: 1000,
+        news: 2000,
+        articles: 3000
+      }
+      const seed = today + seedOffset[activeTab]
+      const random = seededRandom(seed)
+      const total = filteredContent[activeTab].length
+      const dailyIndex = total > 0 ? Math.floor(random() * total) : 0
+      setCurrentIndex(dailyIndex)
+      localStorage.setItem('contentDate', String(today))
+    }
+
+    const getNextUpdateTime = () => {
+      const now = new Date()
+      const nextUpdate = new Date(now)
+      nextUpdate.setHours(6, 0, 0, 0)
+      if (now >= nextUpdate) {
+        nextUpdate.setDate(nextUpdate.getDate() + 1)
+      }
+      return nextUpdate.getTime() - now.getTime()
+    }
+
+    const interval = setInterval(() => {
+      const today = getDailySeed()
+      const storedDate = localStorage.getItem('contentDate')
+      if (storedDate !== String(today)) {
+        updateContent()
+      }
+    }, 60000)
+
+    const dailyTimer = setTimeout(() => {
+      updateContent()
+      setInterval(() => {
+        updateContent()
+      }, 24 * 60 * 60 * 1000)
+    }, getNextUpdateTime())
+
+    return () => {
+      clearInterval(interval)
+      clearTimeout(dailyTimer)
+    }
+  }, [activeTab, currentCategory])
+
+  const currentContent = filteredContent[activeTab]
+  const total = currentContent.length
+  const currentIndexClamped = total > 0 ? currentIndex % total : 0
+  const currentItem = currentContent[currentIndexClamped]
+
   const handlePrev = () => {
-    if (displayIndex > 0) {
+    if (currentIndexClamped > 0) {
       setCurrentIndex(currentIndex - 1)
     }
   }
 
   const handleNext = () => {
-    if (displayIndex < total - 1) {
+    if (currentIndexClamped < total - 1) {
       setCurrentIndex(currentIndex + 1)
     }
   }
@@ -113,17 +164,38 @@ export default function ContentCard({ type }: ContentCardProps) {
 
     if (activeTab === 'stories') {
       const item = currentItem as Story
+      const [isSpeaking, setIsSpeaking] = useState(false)
+      
+      const handleSpeak = () => {
+        if (isSpeaking) {
+          window.speechSynthesis.cancel()
+          setIsSpeaking(false)
+        } else {
+          const utterance = new SpeechSynthesisUtterance(`${item.title}。${item.content}`)
+          utterance.lang = 'zh-CN'
+          utterance.rate = 0.9
+          utterance.onend = () => setIsSpeaking(false)
+          utterance.onerror = () => setIsSpeaking(false)
+          window.speechSynthesis.speak(utterance)
+          setIsSpeaking(true)
+        }
+      }
+      
       return (
         <View className={styles.contentItem}>
           <View className={styles.contentHeader}>
-            <Text className={styles.categoryTag}>{item.category || '故事'}</Text>
-            <Text className={styles.dateText}>{item.date || ''}</Text>
+            <Text className={styles.categoryTag}>{item.category}</Text>
+            <Text className={styles.dateText}>{item.date}</Text>
+            <Button className={`${styles.speakButton} ${isSpeaking ? styles.speaking : ''}`} onClick={handleSpeak}>
+              <Text>{isSpeaking ? '⏹️' : '🔊'}</Text>
+              <Text>{isSpeaking ? '停止朗读' : '朗读'}</Text>
+            </Button>
           </View>
           <View className={styles.contentBody}>
-            <Text className={styles.storyTitle}>{item.title || ''}</Text>
-            <Text className={styles.storyContent}>{item.content || ''}</Text>
+            <Text className={styles.storyTitle}>{item.title}</Text>
+            <Text className={styles.storyContent}>{item.content}</Text>
             <View className={styles.storyFooter}>
-              <Text className={styles.likeCount}>❤️ {item.likes || 0}</Text>
+              <Text className={styles.likeCount}>❤️ {item.likes}</Text>
             </View>
           </View>
         </View>
@@ -168,27 +240,16 @@ export default function ContentCard({ type }: ContentCardProps) {
         </View>
       )
     }
-
-    return null
   }
-
-  const getTabLabels = () => {
-    switch (activeTab) {
-      case 'articles':
-        return { title: '情感短文', subtitle: '治愈 · 释怀 · 自信', icon: '💝' }
-      default:
-        return { title: '暖心驿站', subtitle: '笑话 · 故事 · 资讯', icon: '📖' }
-    }
-  }
-
-  const tabInfo = getTabLabels()
 
   return (
     <Card className={styles.contentCard} padding="lg">
       <View className={styles.cardHeader}>
-        <Text className={styles.cardIcon}>{tabInfo.icon}</Text>
-        <Text className={styles.cardTitle}>{tabInfo.title}</Text>
-        <Text className={styles.cardSubtitle}>{tabInfo.subtitle}</Text>
+        <Text className={styles.cardIcon}>{activeTab === 'articles' ? '💝' : '📖'}</Text>
+        <Text className={styles.cardTitle}>{activeTab === 'articles' ? '情感短文' : '暖心驿站'}</Text>
+        <Text className={styles.cardSubtitle}>
+          {activeTab === 'articles' ? '治愈 · 释怀 · 自信' : '笑话 · 故事 · 资讯'}
+        </Text>
       </View>
 
       <View className={styles.tabBar}>
@@ -249,19 +310,19 @@ export default function ContentCard({ type }: ContentCardProps) {
 
       <View className={styles.navBar}>
         <Button
-          className={`${styles.navButton} ${displayIndex === 0 ? styles.disabled : ''}`}
+          className={`${styles.navButton} ${currentIndexClamped === 0 ? styles.disabled : ''}`}
           onClick={handlePrev}
-          disabled={displayIndex === 0}
+          disabled={currentIndexClamped === 0}
         >
           <Text>← 上一个</Text>
         </Button>
         <Text className={styles.pageIndicator}>
-          {displayIndex + 1} / {total}
+          {currentIndexClamped + 1} / {total}
         </Text>
         <Button
-          className={`${styles.navButton} ${displayIndex === total - 1 ? styles.disabled : ''}`}
+          className={`${styles.navButton} ${currentIndexClamped === total - 1 ? styles.disabled : ''}`}
           onClick={handleNext}
-          disabled={displayIndex === total - 1}
+          disabled={currentIndexClamped === total - 1}
         >
           <Text>下一个 →</Text>
         </Button>

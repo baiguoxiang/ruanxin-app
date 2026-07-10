@@ -219,12 +219,6 @@
   background: rgba(102, 126, 234, 0.08);
   border-radius: $radius-sm;
   margin-bottom: $spacing-xs;
-  cursor: pointer;
-  transition: all $transition-base;
-
-  &:active {
-    background: rgba(102, 126, 234, 0.15);
-  }
 }
 
 .dateTitle {
@@ -235,15 +229,6 @@
 
 .dateSummary {
   font-size: $font-size-xs;
-  display: flex;
-  align-items: center;
-}
-
-.expandIcon {
-  font-size: $font-size-xs;
-  color: #667eea;
-  margin-left: $spacing-xs;
-  transition: transform $transition-base;
 }
 
 .dateRecords {

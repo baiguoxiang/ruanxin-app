@@ -5,7 +5,7 @@ import { useApp } from '@/store';
 import { callFunction } from '@/services/cloud';
 import Header from '@/components/Header';
 import Card from '@/components/Card';
-import ContentCard from '@/components/ContentCard';
+import ContentCenterCard from '@/components/ContentCard';
 import WeatherCard from '@/components/WeatherCard';
 import FortuneCard from '@/components/FortuneCard';
 import SuggestionsCard from '@/components/SuggestionsCard';
@@ -30,7 +30,7 @@ import { getTodayEncouragement } from '@/data/encouragementDB';
 import styles from './index.module.scss';
 import generateDefaultContent from '@/data/generateContent';
 
-const AUTO_UPDATE_HOUR = 10;
+const AUTO_UPDATE_HOUR = 6;
 const AUTO_UPDATE_MINUTE = 0;
 
 interface FeatureItem {
@@ -335,8 +335,13 @@ export default function HomePage() {
       });
       return;
     }
-    
     setExpandedFeature(feature.id);
+    setTimeout(() => {
+      const element = document.getElementById(`expanded-${feature.id}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   };
 
   const handleClose = () => {
@@ -353,7 +358,6 @@ export default function HomePage() {
   };
 
   const renderExpandedContent = () => {
-    console.log('[HomePage] renderExpandedContent:', expandedFeature, dailyContent);
     if (!expandedFeature || !dailyContent) return null;
     
     const mockWeather = {
@@ -393,7 +397,7 @@ export default function HomePage() {
                   onUnlock={handleUnlock}
                 />
                 <WishCard />
-                <ContentCard type="articles" />
+                <ContentCenterCard type="articles" />
               </>
             )}
             
@@ -403,7 +407,7 @@ export default function HomePage() {
             
             {expandedFeature === 'jokes' && (
               <>
-                <ContentCard type="jokes" />
+                <ContentCenterCard type="jokes" />
                 <WhiteNoiseCard />
               </>
             )}
@@ -412,7 +416,7 @@ export default function HomePage() {
               <>
                 <WeatherCard weather={mockWeather} isMember={true} onUnlock={() => {}} />
                 <LocalNewsCard />
-                <ContentCard type="news" />
+                <ContentCenterCard type="news" />
               </>
             )}
             
@@ -560,7 +564,7 @@ export default function HomePage() {
 
         {!expandedFeature && (
           <>
-            <ContentCard type="jokes" />
+            <ContentCenterCard type="jokes" />
             
             <Card className={styles.dailyCollection}>
               <View className={styles.cardHeader}>

@@ -71,7 +71,7 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
       },
       miniCssExtractPluginOption: {
         ignoreOrder: true,
-        filename: 'css/app.[hash].css',
+        filename: 'css/[name].[hash].css',
         chunkFilename: 'css/[name].[chunkhash].css',
       },
       postcss: {
@@ -97,7 +97,7 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
       },
       webpackChain(chain) {
         chain.resolve.plugin('tsconfig-paths').use(TsconfigPathsPlugin);
-        chain.optimization.delete('splitChunks');
+        chain.optimization.splitChunks(false);
         chain.optimization.runtimeChunk(false);
       },
     },
