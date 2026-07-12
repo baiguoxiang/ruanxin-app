@@ -1,4 +1,4 @@
-﻿// ============================================
+// ============================================
 // 多端兼容性样式 (Compatibility)
 // ============================================
 
@@ -27,9 +27,7 @@ navigator {
   height: 0 !important;
 }
 
-.weui-tabbar__label,
-[class*='tabbar'] [class*='label'],
-[class*='tabbar'] [class*='text'] {
-  font-size: 30px !important;
+.weui-tabbar__label {
+  font-size: 24rpx !important;
   line-height: 1.4 !important;
 }
