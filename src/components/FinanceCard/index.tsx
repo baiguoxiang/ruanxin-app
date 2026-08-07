@@ -28,7 +28,25 @@ export default function FinanceCard({ isLocked, onUnlock }: FinanceCardProps) {
   const [inputValue, setInputValue] = useState('');
   const [records, setRecords] = useState<FinanceRecord[]>(() => {
     const saved = localStorage.getItem('finance_records');
-    return saved ? JSON.parse(saved) : [];
+    if (saved) {
+      return JSON.parse(saved);
+    }
+    // 首次使用时加载示例数据
+    const demoData = localStorage.getItem('finance_demo_loaded');
+    if (!demoData) {
+      const today = new Date();
+      const dateStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+      const demoRecords: FinanceRecord[] = [
+        { id: 'demo1', type: 'income', amount: 8000, category: '工资', description: '月薪', date: dateStr, timestamp: today.getTime() - 7200000 },
+        { id: 'demo2', type: 'expense', amount: 35, category: '餐饮', description: '午餐', date: dateStr, timestamp: today.getTime() - 3600000 },
+        { id: 'demo3', type: 'expense', amount: 15, category: '交通', description: '地铁费', date: dateStr, timestamp: today.getTime() - 1800000 },
+        { id: 'demo4', type: 'expense', amount: 128, category: '购物', description: '日用品', date: dateStr, timestamp: today.getTime() - 900000 }
+      ];
+      localStorage.setItem('finance_records', JSON.stringify(demoRecords));
+      localStorage.setItem('finance_demo_loaded', 'true');
+      return demoRecords;
+    }
+    return [];
   });
   const [report, setReport] = useState<ReturnType<typeof generateFinanceReport> | null>(null);
   const [showReport, setShowReport] = useState(false);
@@ -216,6 +234,47 @@ export default function FinanceCard({ isLocked, onUnlock }: FinanceCardProps) {
     });
   };
 
+  const loadDemoData = () => {
+    Taro.showModal({
+      title: '恢复示例数据',
+      content: '将加载演示数据用于体验，原有的数据将被覆盖。确定要恢复吗？',
+      success: (res) => {
+        if (res.confirm) {
+          const today = new Date();
+          const dateStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+          const demoRecords: FinanceRecord[] = [
+            { id: 'demo1', type: 'income', amount: 8000, category: '工资', description: '月薪', date: dateStr, timestamp: today.getTime() - 7200000 },
+            { id: 'demo2', type: 'expense', amount: 35, category: '餐饮', description: '午餐', date: dateStr, timestamp: today.getTime() - 3600000 },
+            { id: 'demo3', type: 'expense', amount: 15, category: '交通', description: '地铁费', date: dateStr, timestamp: today.getTime() - 1800000 },
+            { id: 'demo4', type: 'expense', amount: 128, category: '购物', description: '日用品', date: dateStr, timestamp: today.getTime() - 900000 }
+          ];
+          setRecords(demoRecords);
+          setReport(null);
+          setShowReport(false);
+          Taro.showToast({ title: '已恢复示例数据', icon: 'success' });
+        }
+      }
+    });
+  };
+
+  const exportData = () => {
+    if (records.length === 0) {
+      Taro.showToast({ title: '暂无数据可导出', icon: 'none' });
+      return;
+    }
+    const dataStr = JSON.stringify(records, null, 2);
+    Taro.setClipboardData({
+      data: dataStr,
+      success: () => {
+        Taro.showModal({
+          title: '导出成功',
+          content: `已将 ${records.length} 条财务记录复制到剪贴板，请粘贴到安全位置保存。`,
+          showCancel: false
+        });
+      }
+    });
+  };
+
   const getCategoryIcon = (category: string, type: 'income' | 'expense') => {
     const categories = type === 'income' ? incomeCategories : expenseCategories;
     const cat = categories.find(c => c.name === category);
@@ -276,8 +335,11 @@ export default function FinanceCard({ isLocked, onUnlock }: FinanceCardProps) {
                       <Button className={styles.actionButton} onClick={generateReport}>
                         <Text>📊 报表</Text>
                       </Button>
-                      <Button className={styles.actionButton} onClick={clearRecords}>
-                        <Text>🗑️ 清空</Text>
+                      <Button className={styles.actionButton} onClick={loadDemoData}>
+                        <Text>🔄 恢复</Text>
+                      </Button>
+                      <Button className={styles.actionButton} onClick={exportData}>
+                        <Text>💾 导出</Text>
                       </Button>
                     </View>
                   </View>
@@ -313,6 +375,11 @@ export default function FinanceCard({ isLocked, onUnlock }: FinanceCardProps) {
                         </View>
                       </View>
                     ))}
+                  </View>
+                  <View className={styles.clearSection}>
+                    <Button className={styles.clearButton} onClick={clearRecords}>
+                      <Text>🗑️ 清空所有记录</Text>
+                    </Button>
                   </View>
                 </View>
               )}

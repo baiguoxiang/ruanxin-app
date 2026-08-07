@@ -186,7 +186,7 @@ export default function HomePage() {
       if (result.zodiac) setZodiac(result.zodiac);
       if (result.isNewUser) {
         Taro.showToast({
-          title: '欢迎！免费试用10天',
+          title: '欢迎！免费试用一个月',
           icon: 'none',
           duration: 3000
         });

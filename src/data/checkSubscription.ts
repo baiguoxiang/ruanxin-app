@@ -1,9 +1,14 @@
+import { getAdminConfig, getTrialExpireDate } from '@/utils/adminConfig';
+
 export default function () {
-  const freeTrialEndTime = new Date(Date.now() + 10 * 24 * 60 * 60 * 1000);
+  const config = getAdminConfig();
+  const expireTime = getTrialExpireDate();
+  
   return {
     isMember: true,
     type: 'free_trial' as const,
-    expireTime: freeTrialEndTime.toISOString(),
-    isFreeTrial: true
+    expireTime: expireTime,
+    isFreeTrial: true,
+    trialDays: config.freeTrialDays
   };
 }

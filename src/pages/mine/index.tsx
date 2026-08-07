@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { View, Text, Button } from '@tarojs/components';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Button, Input } from '@tarojs/components';
 import Taro from '@tarojs/taro';
 import { useApp } from '@/store';
+import { loginAsAdmin } from '@/utils/adminConfig';
 import Card from '@/components/Card';
 import AdBanner from '@/components/AdBanner';
 import styles from './index.module.scss';
@@ -9,8 +10,37 @@ import styles from './index.module.scss';
 export default function MinePage() {
   const [activeTab, setActiveTab] = useState('favorites');
   const { subscription, favorites, history, removeFavorite, clearHistory } = useApp();
+  const [loginVisible, setLoginVisible] = useState(false);
+  const [loginUsername, setLoginUsername] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
 
   const isMember = subscription.isMember;
+
+  const handleAdminClick = () => {
+    setLoginUsername('');
+    setLoginPassword('');
+    setLoginVisible(true);
+  };
+
+  const handleLoginSubmit = () => {
+    if (!loginUsername.trim()) {
+      Taro.showToast({ title: '请输入用户名', icon: 'none' });
+      return;
+    }
+    if (!loginPassword.trim()) {
+      Taro.showToast({ title: '请输入密码', icon: 'none' });
+      return;
+    }
+    if (loginAsAdmin(loginUsername, loginPassword)) {
+      setLoginVisible(false);
+      Taro.showToast({ title: '登录成功', icon: 'success' });
+      setTimeout(() => {
+        Taro.navigateTo({ url: '/pages/admin/index' });
+      }, 500);
+    } else {
+      Taro.showToast({ title: '用户名或密码错误', icon: 'none' });
+    }
+  };
 
   const handleVipClick = () => {
     Taro.navigateTo({ url: '/pages/subscribe/index' });
@@ -122,6 +152,11 @@ export default function MinePage() {
           <Text className={styles.menuText}>意见反馈</Text>
           <Text className={styles.menuArrow}>›</Text>
         </View>
+        <View className={styles.menuItem} onClick={handleAdminClick}>
+          <Text className={styles.menuIcon}>🛠️</Text>
+          <Text className={styles.menuText}>管理员入口</Text>
+          <Text className={styles.menuArrow}>›</Text>
+        </View>
       </Card>
 
       <Card className={styles.contentCard} padding="lg">
@@ -209,6 +244,39 @@ export default function MinePage() {
           </>
         )}
       </Card>
+
+      {loginVisible && (
+        <View className={styles.modalOverlay} onClick={() => setLoginVisible(false)}>
+          <View className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+            <Text className={styles.modalIcon}>🔐</Text>
+            <Text className={styles.modalTitle}>管理员登录</Text>
+            <Text className={styles.modalDesc}>请输入账号密码进入后台</Text>
+            <Input
+              className={styles.modalInput}
+              type="text"
+              placeholder="用户名"
+              value={loginUsername}
+              onInput={(e) => setLoginUsername(e.detail.value)}
+            />
+            <Input
+              className={styles.modalInput}
+              type="password"
+              placeholder="密码"
+              value={loginPassword}
+              onInput={(e) => setLoginPassword(e.detail.value)}
+              onConfirm={handleLoginSubmit}
+            />
+            <View className={styles.modalButtons}>
+              <Button className={styles.modalCancelBtn} onClick={() => setLoginVisible(false)}>
+                取消
+              </Button>
+              <Button className={styles.modalConfirmBtn} onClick={handleLoginSubmit}>
+                登录
+              </Button>
+            </View>
+          </View>
+        </View>
+      )}
 
       <AdBanner />
     </View>

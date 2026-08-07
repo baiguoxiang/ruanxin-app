@@ -8,7 +8,7 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
   const baseConfig: UserConfigExport<'webpack5'> = {
     projectName: 'taro_template',
     date: '2025-12-10',
-    designWidth: 375,
+    designWidth: 750,
     deviceRatio: {
       640: 2.34 / 2,
       750: 1,
@@ -90,7 +90,7 @@ export default defineConfig<'webpack5'>(async (merge, { command, mode }) => {
           enable: true,
           config: {
             selectorBlackList: ['body'],
-            baseFontSize: 37.5,
+            baseFontSize: 75,
             unitPrecision: 5,
           },
         },

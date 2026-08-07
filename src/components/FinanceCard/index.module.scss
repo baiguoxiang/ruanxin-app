@@ -1,4 +1,4 @@
-﻿@use '@/styles/variables.scss' as *;
+@use '@/styles/variables.scss' as *;
 
 .cardContainer {
   position: relative;
@@ -163,6 +163,30 @@
   display: flex;
   flex-direction: column;
   gap: $spacing-xs;
+}
+
+.clearSection {
+  display: flex;
+  justify-content: center;
+  padding: $spacing-md 0;
+  border-top: 1rpx solid rgba(102, 126, 234, 0.1);
+  margin-top: $spacing-md;
+}
+
+.clearButton {
+  padding: $spacing-xs $spacing-lg;
+  background: rgba(239, 68, 68, 0.1);
+  border: none;
+  border-radius: $radius-button;
+  color: #ef4444;
+  font-size: $font-size-sm;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    background: rgba(239, 68, 68, 0.2);
+    transform: scale(0.96);
+  }
 }
 
 .recordItem {
